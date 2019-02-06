@@ -59,5 +59,5 @@ Graphics are handled by the Monogame engine, which is an almost 1:1 replacement 
 The Services.Web project is built with the lightweight Nancy web framework for C#, and interfaces with the UI Javascript for a subset of RESTful, asynchronous data fetching operations on the client. For example, when docking with a colony on a planet, the client switches to a static (no physics) GameStateTypes.Colony gamestate, which requests colony data like population count and resources to display on the client UI. Nancy, through redis, interfaces with the appropriate server instance, verifying client authentication keys and player state to prevent spoofing/hacking, and serves up the data directly to the waiting client UI, independent of the main C# client process. The web module is only partially implemented, but I thought it was an awesome proof of concept to include!
 
 
-# Licensing
+# IV. Licensing
 All rights reserved. This code is hosted for display purposes only. No permission is granted for distribution, in original or modified form. You wouldn't download a car, would you?

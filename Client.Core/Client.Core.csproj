@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D550853-7520-4012-BBF0-D6A97B4FA8BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freecon.Client.Core</RootNamespace>
+    <AssemblyName>Freecon.Client.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ADMIN, DEVELOPMENT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ADMIN, DEVELOPMENT</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ADMIN, DEVELOPMENT</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>$(SolutionDir)packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Awesomium.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\custom-packages\Awesomium Technologies LLC\Awesomium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Particles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Extended.Particles.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Particles.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ProjectMercury, Version=3.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\custom-packages\ProjectMercury.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectMercury.ContentPipeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\custom-packages\ProjectMercury.ContentPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\LerpBodyBehavior.cs" />
+    <Compile Include="Coroutines\CoroutineManager.cs" />
+    <Compile Include="Coroutines\CoroutineResultType.cs" />
+    <Compile Include="Coroutines\CoroutineResult.cs" />
+    <Compile Include="Coroutines\ICoroutineManager.cs" />
+    <Compile Include="Coroutines\ICoroutineResult.cs" />
+    <Compile Include="Coroutines\Routine.cs" />
+    <Compile Include="Coroutines\RoutineHandle.cs" />
+    <Compile Include="Coroutines\Wait.cs" />
+    <Compile Include="DrawHelper3D.cs" />
+    <Compile Include="Extensions\DrawPrimitives.cs" />
+    <Compile Include="Extensions\MessageReader.cs" />
+    <Compile Include="Extensions\PositionUpdateExtensions.cs" />
+    <Compile Include="Factories\StructureFactoryManager.cs" />
+    <Compile Include="Factories\WeaponFactory.cs" />
+    <Compile Include="GameStateStatus.cs" />
+    <Compile Include="GameStateType.cs" />
+    <Compile Include="IGlobalGameUISingleton.cs" />
+    <Compile Include="Interfaces\IDraw3D.cs" />
+    <Compile Include="Interfaces\IDrawableGameState.cs" />
+    <Compile Include="Interfaces\States\IPlanetStateManager.cs" />
+    <Compile Include="Interfaces\States\IGameState.cs" />
+    <Compile Include="Interfaces\States\IGameStateManager.cs" />
+    <Compile Include="Interfaces\States\IPlayableGameState.cs" />
+    <Compile Include="Interfaces\States\IState.cs" />
+    <Compile Include="Interfaces\States\IStateView.cs" />
+    <Compile Include="Interfaces\States\IStructureManager.cs" />
+    <Compile Include="Interfaces\Legacy\ILegacyGameState.cs" />
+    <Compile Include="Interfaces\Legacy\IGameStateManager.cs" />
+    <Compile Include="Interfaces\Legacy\ILegacyLoginGameState.cs" />
+    <Compile Include="Interfaces\Legacy\ILegacyPortStateManager.cs" />
+    <Compile Include="MainManager.cs" />
+    <Compile Include="Managers\ClientPlayerInfoManager.cs" />
+    <Compile Include="Managers\ParticleTest.cs" />
+    <Compile Include="Objects\DrawData3D.cs" />
+    <Compile Include="Objects\Invasion\Mine.cs" />
+    <Compile Include="Objects\Projectiles\MineSplash.cs" />
+    <Compile Include="Objects\Ships\CustomShipStats.cs" />
+    <Compile Include="Objects\Ships\LogicStates.cs" />
+    <Compile Include="Objects\Ships\MissilePilotLv1.cs" />
+    <Compile Include="Objects\Ships\NetworkPilot.cs" />
+    <Compile Include="Objects\Ships\NPCPilot.cs" />
+    <Compile Include="Objects\Ships\PilotType.cs" />
+    <Compile Include="Objects\Ships\PlayerPilot.cs" />
+    <Compile Include="Objects\Ships\Ship3D.cs" />
+    <Compile Include="Objects\Ships\SuperCoolAwesome3DShip.cs" />
+    <Compile Include="Objects\Sun.cs" />
+    <Compile Include="Managers\Networking\MessageService.cs" />
+    <Compile Include="ProjectileRequest.cs" />
+    <Compile Include="ClientBootstrapper.cs" />
+    <Compile Include="ClientEnvironmentType.cs" />
+    <Compile Include="Extensions\FarseerExtensions.cs" />
+    <Compile Include="Extensions\TeamExtensions.cs" />
+    <Compile Include="Interfaces\ICanFire.cs" />
+    <Compile Include="Interfaces\ICollidable.cs" />
+    <Compile Include="Interfaces\ICommandable.cs" />
+    <Compile Include="Interfaces\IDraw.cs" />
+    <Compile Include="Interfaces\ILegacyGameObject.cs" />
+    <Compile Include="Interfaces\IHandle.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\INetworkMessage.cs" />
+    <Compile Include="Interfaces\IPhysicsObject.cs" />
+    <Compile Include="Interfaces\IProjectile.cs" />
+    <Compile Include="Interfaces\ISelectable.cs" />
+    <Compile Include="Interfaces\IShip.cs" />
+    <Compile Include="Interfaces\ISimulatable.cs" />
+    <Compile Include="Interfaces\ITargetable.cs" />
+    <Compile Include="Interfaces\ITargeter.cs" />
+    <Compile Include="Interfaces\ITeamable.cs" />
+    <Compile Include="Interfaces\IUpdate.cs" />
+    <Compile Include="Interfaces\States\IViewModel.cs" />
+    <Compile Include="Managers\ChatManager.cs" />
+    <Compile Include="Managers\FloatyAreaObjectManager.cs" />
+    <Compile Include="Managers\GamepadManager.cs" />
+    <Compile Include="Managers\CollisionManager.cs" />
+    <Compile Include="Managers\Debugger.cs" />
+    <Compile Include="Managers\GalaxyManager.cs" />
+    <Compile Include="Managers\GUI\DebugTextManager.cs" />
+    <Compile Include="Managers\GUI\LoadingManager.cs" />
+    <Compile Include="Managers\GUI\LoginManager.cs" />
+    <Compile Include="Managers\GUI\RadarSpaceManager.cs" />
+    <Compile Include="Managers\Invasion\BuildingManager.cs" />
+    <Compile Include="Managers\Invasion\DefenceManager.cs" />
+    <Compile Include="Managers\Invasion\PlanetManager.cs" />
+    <Compile Include="Managers\Invasion\TileManager.cs" />
+    <Compile Include="Managers\Invasion\TurretManager.cs" />
+    <Compile Include="Managers\KeyboardManager.cs" />
+    <Compile Include="Managers\Level.cs" />
+    <Compile Include="Managers\ClientLogger.cs" />
+    <Compile Include="Managers\MouseManager.cs" />
+    <Compile Include="Managers\Networking\ClientManager.cs" />
+    <Compile Include="Managers\Networking\MainNetworkingManager.cs" />
+    <Compile Include="Managers\NewChatManager.cs" />
+    <Compile Include="Managers\ParticleManager.cs" />
+    <Compile Include="Managers\PhysicsManager.cs" />
+    <Compile Include="Managers\PlanetType.cs" />
+    <Compile Include="Managers\PlayerShipManager.cs" />
+    <Compile Include="Managers\ProjectileManager.cs" />
+    <Compile Include="Managers\SelectionManager.cs" />
+    <Compile Include="Managers\SettingsManager.cs" />
+    <Compile Include="Managers\ClientShipManager.cs" />
+    <Compile Include="Managers\SimulationManager.cs" />
+    <Compile Include="Managers\SpaceManager.cs" />
+    <Compile Include="Managers\Space\BorderManager.cs" />
+    <Compile Include="Managers\Space\GravityManager.cs" />
+    <Compile Include="Managers\Space\SpaceObjectManager.cs" />
+    <Compile Include="Managers\Space\WarpHoleManager.cs" />
+    <Compile Include="Objects\FloatyAreaObject.cs" />
+    <Compile Include="Objects\Projectiles\GravityBombProjectile.cs" />
+    <Compile Include="Objects\Projectiles\HullPlagueProjectile.cs" />
+    <Compile Include="Objects\Projectiles\IMissile.cs" />
+    <Compile Include="Objects\Projectiles\LaserProjectile.cs" />
+    <Compile Include="Objects\Projectiles\LaserWaveProjectile.cs" />
+    <Compile Include="Objects\Projectiles\PlasmaCannonProjectile.cs" />
+    <Compile Include="Objects\Projectiles\TurretLaserProjectile.cs" />
+    <Compile Include="Objects\Projectiles\BC_Laser.cs" />
+    <Compile Include="Objects\Weapons\GravBomber.cs" />
+    <Compile Include="Objects\Weapons\LaserWave.cs" />
+    <Compile Include="Services\StateChangeService.cs" />
+    <Compile Include="Services\TargetingService.cs" />
+    <Compile Include="Managers\TeamManager.cs" />
+    <Compile Include="Managers\TextureManager.cs" />
+    <Compile Include="Managers\UserDataManager.cs" />
+    <Compile Include="Mathematics\AIHelper.cs" />
+    <Compile Include="Managers\Space\Background.cs" />
+    <Compile Include="Mathematics\Camera2D.cs" />
+    <Compile Include="Mathematics\Effects\BloomComponent.cs" />
+    <Compile Include="Mathematics\Effects\BloomSettings.cs" />
+    <Compile Include="Mathematics\HelperFunctions.cs" />
+    <Compile Include="Mathematics\LevelDecomposer.cs" />
+    <Compile Include="Mathematics\MarchingSquares.cs" />
+    <Compile Include="Mathematics\ParseBitmap.cs" />
+    <Compile Include="Mathematics\RenderingMath.cs" />
+    <Compile Include="Mathematics\Space\Boundaries.cs" />
+    <Compile Include="Mathematics\Space\RotationalCamera.cs" />
+    <Compile Include="Mathematics\TileEditor\EditorInput.cs" />
+    <Compile Include="Mathematics\TileEditor\ParsePNG.cs" />
+    <Compile Include="Mathematics\TileEditor\SelectionHUD.cs" />
+    <Compile Include="Mathematics\TileEditor\SelectTile.cs" />
+    <Compile Include="Mathematics\TileEditor\XMLSaver.cs" />
+    <Compile Include="Objects\CargoHandler_ClientVM.cs" />
+    <Compile Include="Objects\CommandCenter.cs" />
+    <Compile Include="Objects\Decal.cs" />
+    <Compile Include="Objects\GenerationStar.cs" />
+    <Compile Include="Objects\Goods.cs" />
+    <Compile Include="Objects\GravityObject.cs" />
+    <Compile Include="Objects\Invasion\PlanetLevel.cs" />
+    <Compile Include="Objects\Invasion\RenderLevel.cs" />
+    <Compile Include="Objects\Invasion\Tile.cs" />
+    <Compile Include="Objects\Invasion\Turret.cs" />
+    <Compile Include="Objects\Modules.cs" />
+    <Compile Include="Objects\ObjInView.cs" />
+    <Compile Include="Objects\Planet.cs" />
+    <Compile Include="Objects\Port.cs" />
+    <Compile Include="Objects\PortShip.cs" />
+    <Compile Include="Objects\Projectiles\Missile.cs" />
+    <Compile Include="Objects\Projectiles\Projectiles.cs" />
+    <Compile Include="Objects\Projectiles\ProjStats.cs" />
+    <Compile Include="Objects\QueuedMissile.cs" />
+    <Compile Include="Objects\QueuedPlanet.cs" />
+    <Compile Include="Objects\Services.cs" />
+    <Compile Include="Objects\Ships\CustomShip.cs" />
+    <Compile Include="Objects\Ships\Inherited Ships.cs" />
+    <Compile Include="Objects\Ships\Mothership.cs" />
+    <Compile Include="Objects\Ships\Pilot.cs" />
+    <Compile Include="Objects\Ships\PortInterfaceShip.cs" />
+    <Compile Include="Objects\Ships\Ship.cs" />
+    <Compile Include="Objects\Structure.cs" />
+    <Compile Include="Objects\Targets\WeakTarget.cs" />
+    <Compile Include="Objects\Targets\WeakTargeter.cs" />
+    <Compile Include="Objects\WarpHole.cs" />
+    <Compile Include="Objects\Weapons\HurrDurr.cs" />
+    <Compile Include="Objects\Weapons\Laser.cs" />
+    <Compile Include="Objects\Weapons\MissileLauncher.cs" />
+    <Compile Include="Objects\Weapons\NaniteLauncher.cs" />
+    <Compile Include="Objects\Weapons\PlasmaCannon.cs" />
+    <Compile Include="Objects\Weapons\Weapon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CameraService.cs" />
+    <Compile Include="Services\UIConversionService.cs" />
+    <Compile Include="Services\XNAGameTimeService.cs" />
+    <Compile Include="UIStateManagerContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Configs\Core.Configs.csproj">
+      <Project>{f8953f1b-016e-4103-85ab-a80dc44d13fd}</Project>
+      <Name>Core.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
+      <Project>{56be3d9c-b42b-4f0f-bcf4-2889c58e55f2}</Project>
+      <Name>Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Models.Enums\Core.Models.Enums.csproj">
+      <Project>{51ec19fa-7d49-434e-a835-2c51b00a7da7}</Project>
+      <Name>Core.Models.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Lidgren\Core.Networking.Lidgren.csproj">
+      <Project>{89e77324-f8da-4720-8e3b-67aafab95113}</Project>
+      <Name>Core.Networking.Lidgren</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Models.Proto\Core.Networking.Models.Proto.csproj">
+      <Project>{f0e4c837-225e-46f0-b20c-ea8f0d81fc00}</Project>
+      <Name>Core.Networking.Models.Proto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Utils\Core.Utililities.csproj">
+      <Project>{6b6053ac-7a8f-4dba-b472-15b92c6ae0ac}</Project>
+      <Name>Core.Utililities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farseer_monogame\Farseer Physics MonoGame.csproj">
+      <Project>{2008b1a2-f577-4ca4-bfd2-9078f3f78250}</Project>
+      <Name>Farseer Physics MonoGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Messages\Core.Networking.Messages.csproj">
+      <Project>{5c288ffd-574f-4984-88b5-39d8ffdf0111}</Project>
+      <Name>Core.Networking.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Objects\Core.Networking.Objects.csproj">
+      <Project>{1771faf4-2f90-45fd-a3a9-e8a9b4fd90ba}</Project>
+      <Name>Core.Networking.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Proto\Core.Networking.Proto.csproj">
+      <Project>{51ec5ac4-ac05-4b54-bcc1-03a2db8a46a3}</Project>
+      <Name>Core.Networking.Proto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{8b2a8553-3b05-4253-bdbe-7021155cd1a2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Models\Core.Models.csproj">
+      <Project>{7163a171-74b1-4fb9-9cd3-72b59c09f7a4}</Project>
+      <Name>Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Networking\Core.Networking.csproj">
+      <Project>{530534f3-b57e-49ae-97cf-2675ea6359c1}</Project>
+      <Name>Core.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren\Lidgren\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{49ba1c69-6104-41ac-a5d8-b54fa9f696e8}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.RedisWrapper\Server.RedisWrapper.csproj">
+      <Project>{6c0a5ed3-8c6f-4cac-b9bb-4c0866d45cf3}</Project>
+      <Name>Server.RedisWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Console\Server.Console.csproj">
+      <Project>{5b8733f8-69d6-4545-9a7e-b3f44d7c9105}</Project>
+      <Name>Server.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

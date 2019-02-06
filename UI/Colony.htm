@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+
+    <link type="text/css" href="jQuery/css/smoothness/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />
+
+    <link type="text/css" href="UI.css" rel="Stylesheet" />
+
+    <script type="text/javascript" src="jQuery/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jQuery/js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="jQuery/js/jquery.layoutengine.min.js"></script>
+
+
+    <script src="jsTEST/jquery.js" type="text/javascript"></script>
+    <script src="jsTEST/modernizr.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            if (!Modernizr.meter) {
+                alert('Sorry your brower does not support HTML5 progress bar');
+            } else {
+                var progressbar = $('#progressbar'),//gets the progress bar, presumably by ID "progressbar"
+                    max = progressbar.attr('max'),
+                    time = (1000 / max) * 5,
+                    value = progressbar.val();
+
+                var loading = function () {
+
+                    //progressbar.val(62);//sets value
+                    //$('.progress-value').html(62 + '%');//sets text
+
+                    if (value == max) {
+                        clearInterval(animate);
+
+                        //progressbar.val(62);
+
+
+                        //$('.progress-value').html(value + '%');
+                    }
+                };
+
+                var animate = setInterval(function () {
+                    loading();
+                }, time);
+            };
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#txtDialog").dialog({
+                position: [10, 440],
+                closeOnEscape: false,
+                dialogClass: "textDialog",
+                resizable: false,
+                width: 'auto'
+            });
+        });
+
+        function ShowDialog(dialogID) {
+            $("#" + dialogID).dialog();
+        }
+
+        function addTextMessage(message) {
+            textBox = document.getElementById('txtDialogTextArea');
+            textBox.value = textBox.value + message + " \n";
+        }
+
+        function setEnergyValue(value) {
+            var progressbar = $('#progressbar'); // Get element called "progressbar"
+            progressbar.val(value);//Set the value
+            $('.progress-value').html('Energy: ' + value + '%');//set the text
+
+        }
+        //http://www.rajeeshcv.com/page/details/6/layoutmanager-jquery-plugin
+        $(document).ready(function () {
+
+            //make elements unselectable.
+            $("*:not(input)").addClass("unselectable");
+
+            var layoutSettings =
+            {
+                Name: "Main",
+                Dock: $.layoutEngine.DOCK.FILL,
+                EleID: "main",
+                Margin: 5,
+                Children: [
+                    {
+                        Name: "Top",
+                        Dock: $.layoutEngine.DOCK.TOP,
+                        EleID: "top",
+                        Margin: 5,
+                        Height: 20
+                    },
+                    {
+                        Name: "Left",
+                        Dock: $.layoutEngine.DOCK.LEFT,
+                        EleID: "left",
+                        MarginLeft: 5,
+                        MarginRight: 5,
+                        Width: 30
+                    },
+                    {
+                        Name: "Fill",
+                        Dock: $.layoutEngine.DOCK.FILL,
+                        EleID: "fill",
+                        Margin: 5,
+                    },
+                    {
+                        Name: "Right",
+                        Dock: $.layoutEngine.DOCK.RIGHT,
+                        EleID: "right",
+                        MarginLeft: 5,
+                        MarginRight: 5,
+                        Width: 100
+                    },
+                    {
+                        Name: "Bottom",
+                        Dock: $.layoutEngine.DOCK.BOTTOM,
+                        EleID: "bottom",
+                        Margin: 5,
+                        Height: 100
+                    }
+                ]
+
+            };
+
+            $.layoutEngine(layoutSettings);
+
+            $("#txtDialogInput").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    AnotherObject.ChatTextEntered($("#txtDialogInput").val());
+                    $("#txtDialogInput").val('');
+                }
+            });
+
+        });
+
+        //Call a .Net function, no return value --!>
+        function myMethod() {
+            document.write("In myMethod, calling .NET but expecting no return value.<br/>");
+
+            jsobject.callNETNoReturn();
+        }
+
+        //Call a .Net function, get return value (can pass data from .Net to webview) --!>
+        function myMethodExpectingReturn() {
+            document.write("In myMethodExpectingReturn, calling .NET and expecting return value.<br/>");
+
+            var returnVal2 = jsobject.callNETWithReturn("foo");
+            document.write("Got value from .NET: " + returnVal2 + "<br/>");
+        }
+
+        //Return a value, i.e. Tx/Rx with .Net --!>
+        function myMethodProvidingReturn(whatToReturn) {
+            var returnVal = whatToReturn + "bar";
+            document.write("Returning '" + returnVal + "' to .NET.");
+
+            return returnVal;
+        }
+
+
+
+
+
+
+    </script>
+
+
+    <title></title>
+</head>
+<body>
+
+    <div class="demo-wrapper html5-progress-bar">
+        <div class="progress-bar-wrapper">
+            <progress id="progressbar" value="0" max="100"></progress>
+            <span class="progress-value">0%</span>
+        </div>
+    </div>
+
+    <div id="main" style="background-color:transparent">
+
+
+        <div id="left" class="baseBar" style=" display:none">
+            Left
+        </div>
+
+
+        <div id="fill" style="background-color:transparent; display:none">
+            Fill
+        </div>
+
+
+
+
+        <div id="bottom" class="baseBar center_box">
+
+            <table class="bottomBarTable">
+                <tr>
+                    <td align="center">
+                        <ul class="abilities_bar">
+
+                            <li><img src='Images/Icons1/Command Center.png' alt='Attack' onclick="InstructionInterface.LeaveToPlanet();" /></li>
+                            <li><img src='Images/Icons1/galaxy.png' alt='Mana Potion' onclick="InstructionInterface.LeaveToSpace();" /></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <div id="txtDialog" title="Debug Text" style="display:none">
+        <textarea id="txtDialogTextArea" rows='10' cols='40' readonly="readonly"></textarea>
+        <br />
+        <input id="txtDialogInput" type="text" size='40' />
+    </div>
+
+
+    <div id="dlgInventory" title="Inventory" style="display:none">
+        <p>This is an example dialog where you might find your inventory.</p>
+        <p>Sadly you have nothing, sap.</p>
+    </div>
+
+    <div id="dlgOptions" title="Options" style="display:none">
+        <p>Here you can not set your audio, video, and gameplay options.</p>
+    </div>
+
+    <div id="dlgStats" title="Stats" style="display:none">
+        <p>Here you can weep for your puny character.</p>
+    </div>
+
+    <!--First tooltip-->
+    <a href="#" class="tooltip">
+        Tooltip <span>
+            <img class="callout" src="cssttp/callout_black.gif" />
+            <strong>Most Light-weight Tooltip</strong><br />
+            This is the easy-to-use Tooltip driven purely by CSS.
+        </span>
+    </a> <!--Second tooltip-->
+    <a href="#" class="tooltip">
+        <img src="/tooltip/css-tooltip-image.gif" /> <span>
+            <img class="callout" src="cssttp/callout_black.gif" />
+            <img src="/tooltip/src/tooltips-cd2.jpg" style="float:right;" />
+            <strong>CSS only Tooltip</strong><br /> Pure CSS popup tooltips with clean semantic XHTML.
+        </span>
+    </a>
+
+
+</body>
+</html>

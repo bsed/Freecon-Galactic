@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E24E0A3-8BF7-42F3-B09C-C9F3519B18AA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freecon.Client.MonoGame.Windows</RootNamespace>
+    <AssemblyName>Freecon.Client.MonoGame.Windows</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsMain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Configuration.3.3.0\lib\net40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MemBus, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MemBus.4.0.1\lib\net45\MemBus.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.Portable.3.6.0.1625\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectMercury, Version=3.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\custom-packages\ProjectMercury.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectMercury.ContentPipeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\custom-packages\ProjectMercury.ContentPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <Content Include="Content\Client.MonoGame.Content\Buildings\Biodome.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Buildings\Biodome.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Buildings\Command Center.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Buildings\Command Center.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Cursors\reticle-original.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Cursors\reticle-original.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Debug\edge.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Debug\edge.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Debug\EdgeOfSystem.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Debug\EdgeOfSystem.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Chatbox2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Chatbox2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\ChatboxFont.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\ChatboxFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\CommandsTileEditor.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\CommandsTileEditor.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\dot_w.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\dot_w.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\drawFont.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\drawFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD_Font.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\HUD_Font.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\LoginFont.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\LoginFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\planetrings.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\planetrings.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Port_Interface.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Port_Interface.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\radar.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\radar.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\SelectionLeft.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\SelectionLeft.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\SelectionRight.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\SelectionRight.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\4wayC.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\4wayC.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\parse.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\parse.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\RUNNINGMAN.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\RUNNINGMAN.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\tyest1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Modules\tyest1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\barren_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\barren_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Crystalline-200px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Crystalline-200px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\desertTwo_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\desertTwo_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\desert_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\desert_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\frozen_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\frozen_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Gaia-200px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Gaia-200px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\GasGiant1a_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\GasGiant1a_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\GasGiant_Shadow_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\GasGiant_Shadow_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\gray_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\gray_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\hotgasgiant_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\hotgasgiant_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\ice2_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\ice2_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\icegiant_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\icegiant_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Oceanic-187px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Oceanic-187px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\paradise_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\paradise_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\red_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\red_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\rocky_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\rocky_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Terra_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Terra_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\TurretHead_96.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\TurretHead_96.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\turret_grass_96_final.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\turret_grass_96_final.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\unstable_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\unstable_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Water_300px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Water_300px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\hellhound.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\hellhound.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\Missile.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\Missile.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType3.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType4.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\MissileType4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\Plasma Cannon.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Projectiles\Plasma Cannon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\BC.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\BC.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\dread_game.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\dread_game.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Fighter-TestSmall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Fighter-TestSmall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth.skinned.small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth.skinned.small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth.skinned2_alpha.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth.skinned2_alpha.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth1_small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\jeyth1_small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Pirani_small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Pirani_small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Rasputin.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\Rasputin.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\ship.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\ship.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\ship_small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\ship_small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\sm_fighter_small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\sm_fighter_small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\voxcruiser_small.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\voxcruiser_small.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\zyv.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Ships\zyv.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background3.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\background3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Dust1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Dust1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mines-off.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mines-off.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mines-on.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mines-on.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mothership_side.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mothership_side.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mothership_side_box.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\mothership_side_box.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Port_360p.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Port_360p.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star2a.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star2a.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star3.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star3a.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star3a.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star4.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star4a.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\star4a.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\stara.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\stara.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Starfield.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Starfield.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_blue_2.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_blue_2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Sun_Blue_400.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Sun_Blue_400.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_transparent.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_transparent.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_transparent_400.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_transparent_400.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Sun_Yellow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\Sun_Yellow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_yellow2_fullres.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_yellow2_fullres.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_yellow_400.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\sun_yellow_400.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\WarpHole.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Space\WarpHole.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Beam.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Beam.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\BeamBlurred.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\BeamBlurred.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud002.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud003.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud004.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Cloud004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Flame.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Flame.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\FlowerBurst.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\FlowerBurst.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\GreenPoint.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\GreenPoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Laser.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Laser.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\LensFlare.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\LensFlare.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\MultiDot.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\MultiDot.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle002.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle003.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle003.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle004.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle004.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle005.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle005.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle006.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle006.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle007.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Particle007.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\RedPoint.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\RedPoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Ring001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Ring001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Ring002.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Ring002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Shield_sfx.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Shield_sfx.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SoftClumpy.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SoftClumpy.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SoftSmokey.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SoftSmokey.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spikey001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spikey001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spikey002.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spikey002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Splash.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Splash.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spray001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Spray001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Star.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Star.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SunGlow7.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\SunGlow7.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Water001.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Water001.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Water002.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Water002.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\wedge_p1_diff_v1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\wedge_p1_diff_v1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Weeds.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Textures\Weeds.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\snow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\snow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\snow_96.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\snow_96.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_2_base_128px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_2_base_128px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_2_head_128px.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_2_head_128px.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_base_128.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Turrets\turret_base_128.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Ambassador.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Ambassador.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\energyDisruptor.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\energyDisruptor.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Hellhound.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Hellhound.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\lasershit.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\lasershit.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\lazer.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\lazer.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\shot1.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\shot1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Yellow_Orb.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Weapons\Yellow_Orb.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\BloomCombine.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\BloomCombine.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\BloomExtract.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\BloomExtract.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\desaturate.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\desaturate.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\disappear.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\disappear.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\GaussianBlur.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\GaussianBlur.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\normalmap.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\normalmap.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\NormalMapping.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\NormalMapping.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\refraction.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Effects\refraction.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\LoginBackground.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\LoginBackground.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\LoginScreen0.04.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\LoginScreen0.04.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\SelectedButtonOverlay.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Login\SelectedButtonOverlay.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_100px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_100px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_120px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_120px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_150px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_150px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_30px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_30px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_40px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_40px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_50px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_50px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_80px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseMoonRing_80px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_100px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_100px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_120px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_120px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_150px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_150px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_200px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_200px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_250px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_250px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_300px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_300px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_50px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_50px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_68px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_68px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_80px.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\BaseRing_80px.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\edgeofradar.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\edgeofradar.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\Hud_ShipRadar.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\Hud_ShipRadar.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\otherShips.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\otherShips.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\planetMinimap.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\planetMinimap.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\sunMinimap.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\sunMinimap.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\warp2.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\warp2.xnb" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\warp3.mgcontent" />
+    <None Include="Content\Client.MonoGame.Content\GUI\Minimap\warp3.xnb" />
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\340x700.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\340x700.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\3Bars.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\3Bars.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\480x320.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\480x320.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\700x560.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\700x560.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\700x560Galaxy.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\700x560Galaxy.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Energy.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Energy.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Health.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Health.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Shields.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Bar_Shields.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\ButtonBackground.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\ButtonBackground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_DebugIcon.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_DebugIcon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_GalaxyIcon.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_GalaxyIcon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_GalaxyIcon_Selected.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_GalaxyIcon_Selected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortDropDownButton.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortDropDownButton.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortTop.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortTop.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortTop_256.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_PortTop_256.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_Purchase.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_Purchase.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_StaticWindow_Off.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_StaticWindow_Off.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_StaticWindow_On.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_StaticWindow_On.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_SystemIcon.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_SystemIcon.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_SystemIcon_Selected.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Button_SystemIcon_Selected.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Close.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Close.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel-Bar.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel-Bar.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel-Brushed.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel-Brushed.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\DockablePanel.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Notification250x100.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Notification250x100.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Port_ShipWindow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\Port_ShipWindow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\station1360x768.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\station1360x768.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\stationhd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\GUI\Windows\stationhd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Crystalline-Shadow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Crystalline-Shadow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Gaia-Shadow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Gaia-Shadow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\OceanicShadow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\OceanicShadow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Terra_3-Shadow.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\Terra_3-Shadow.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\water-shadow_300.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Planet\Shadows\water-shadow_300.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_bottomEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_bottomEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Cracked_A.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Cracked_A.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Cracked_B.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Cracked_B.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Ground.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_leftEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_leftEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_LeftRight.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_LeftRight.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_rightEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_rightEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_TopBottom.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_TopBottom.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_topEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_topEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomLeft_Corner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomLeft_Corner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomRight_Corner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomRight_Corner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_BottomWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_LeftWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_LeftWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_RightWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_RightWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopLeft_Corner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopLeft_Corner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopRight_Corner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopRight_Corner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Earth2\Tile_Earth_Wall_TopWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomLeftCorner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomLeftCorner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomLeftInner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomLeftInner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomRightCorner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomRightCorner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomRightInner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomRightInner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\BottomWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\Ground.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\Ground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftRight.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftRight.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\LeftWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\RightEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\RightEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\RightWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\RightWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopBottom.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopBottom.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopEnd.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopEnd.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopLeftInner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopLeftInner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopLeftWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopLeftWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopRightInner.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopRightInner.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopRightWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopRightWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopWall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\TopWall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\Wall.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\Tileset\Lava\Wall.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\somelevel.mgcontent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Client.MonoGame.Content\somelevel.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Config\Client.Config.csproj">
+      <Project>{8e010a3f-7dad-40c8-ac2b-86960b3c8152}</Project>
+      <Name>Client.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Configs\Core.Configs.csproj">
+      <Project>{f8953f1b-016e-4103-85ab-a80dc44d13fd}</Project>
+      <Name>Core.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
+      <Project>{56BE3D9C-B42B-4F0F-BCF4-2889C58E55F2}</Project>
+      <Name>Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Utils\Core.Utililities.csproj">
+      <Project>{6b6053ac-7a8f-4dba-b472-15b92c6ae0ac}</Project>
+      <Name>Core.Utililities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farseer_monogame\Farseer Physics MonoGame.csproj">
+      <Project>{2008B1A2-F577-4CA4-BFD2-9078F3F78250}</Project>
+      <Name>Farseer Physics MonoGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Client.Core\Client.Core.csproj">
+      <Project>{7d550853-7520-4012-bbf0-d6a97b4fa8ba}</Project>
+      <Name>Client.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Client.GameStates\Client.States.csproj">
+      <Project>{38be3fc8-42a9-4cee-b0ab-98230e9bc3e1}</Project>
+      <Name>Client.States</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Client.View.Awesomium\Client.View.CefSharp.csproj">
+      <Project>{e172c75c-1249-4ae9-ab0f-68c89ae46670}</Project>
+      <Name>Client.View.CefSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Client.View.Xna\Client.View.Xna.csproj">
+      <Project>{3c1f6508-1016-4309-991d-2b03878b8f6c}</Project>
+      <Name>Client.View.Xna</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Client.ViewModel\Client.ViewModel.csproj">
+      <Project>{907a26fa-ef2a-47a0-b2e0-53d4064b411c}</Project>
+      <Name>Client.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{8b2a8553-3b05-4253-bdbe-7021155cd1a2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Networking\Core.Networking.csproj">
+      <Project>{530534F3-B57E-49AE-97CF-2675EA6359C1}</Project>
+      <Name>Core.Networking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\cef.redist.x64.3.2785.1486\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2785.1486\build\cef.redist.x64.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.2785.1486\build\cef.redist.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.2785.1486\build\cef.redist.x64.targets'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.2785.1486\build\cef.redist.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.2785.1486\build\cef.redist.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\cef.redist.x86.3.2785.1486\build\cef.redist.x86.targets" Condition="Exists('..\packages\cef.redist.x86.3.2785.1486\build\cef.redist.x86.targets')" />
+  <Import Project="..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.53.0.1\build\CefSharp.Common.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

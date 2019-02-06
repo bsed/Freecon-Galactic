@@ -1,0 +1,4 @@
+﻿namespace Server.Managers.Enums
+{
+    
+}

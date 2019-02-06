@@ -1,0 +1,18 @@
+using System.Collections.Generic;
+using Core.Models.Enums;
+using Freecon.Models.ChatCommands;
+
+namespace Server.Managers.ChatCommands
+{
+    public class InvalidCommand : IChatCommand
+    {
+        protected List<string> _commandSignatures = new List<string>();
+
+        public List<string> CommandSignatures { get { return _commandSignatures; } }
+
+        public List<OutboundChatMessage> ParseChatline(ChatMetaData meta)
+        {
+            return meta.ReplyResponse(new ChatlineObject(ChatText.InvalidChat, ChatlineColor.Red));
+        }
+    }
+}

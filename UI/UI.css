@@ -1,0 +1,124 @@
+    .unselectable
+    {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    }
+
+
+
+body
+    {
+    background-color:transparent;
+    overflow:hidden;
+    }
+    
+.baseBar
+    {
+        
+    -webkit-border-image: url("Images/smallbubble.png") 10 10 10 10 repeat repeat;
+    
+    -webkit-border-radius:5px;
+    border-width:2px;
+    background-color:Red;	
+    background-color:rgba(255, 0, 0, 0.3)
+    }		
+
+.abilities_bar
+    {
+    list-style-type: none;	
+    margin: auto;
+    padding: 0;	
+    background-color:transparent;
+    width: auto;	
+    position: relative;
+    
+    }
+
+ .abilities_bar li
+    {
+    display:inline-block;
+    
+    width:48px;
+    height:48px;
+    margin:1px;
+    padding:0px;
+    border-width: 2px;
+    border-color:Green;
+    border-style:solid;
+    text-align:center;	
+    background-color:Black;
+    
+    }  
+    
+.abilities_bar li:hover
+    {
+    border-color:Red;
+   
+    }
+    
+.abilities_bar li img
+    {
+    width:100%;
+    height:100%;
+    }
+    
+.bottomBarTable
+    {
+    width:100%;
+    }
+
+@font-face {font-family: "Kimberley";src: url(http://www.princexml.com/fonts/larabie/kimberle.ttf) format("truetype");}
+
+.textDialog
+    {
+    background-color:#CCCCCC;
+    padding:1px;
+    margin:1px;
+    
+    /*font-family: Kimberly;*/
+    font-family:Serif;
+     font-size:small;
+     /* @font-face {font-family:Pericles; font-weight:bold;} */
+    }
+    
+.textDialog .ui-dialog-titlebar {display:none}
+.textDialog .ui-dialog-content {background-color:#CCCCCC;}
+
+
+a.tooltip 
+{
+    outline:none; 
+} 
+
+a.tooltip strong 
+{
+    line-height:30px;
+} 
+
+a.tooltip:hover 
+{
+    text-decoration:none;
+} 
+
+a.tooltip span 
+{ 
+    z-index:10;display:none; padding:14px 20px; margin-top:60px; margin-left:-160px; width:300px; line-height:16px; 
+} 
+
+a.tooltip:hover span
+{ 
+    display:inline; position:absolute; border:2px solid #FFF; color:#EEE; background:#333 url(cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0; 
+}
+
+.callout 
+{
+    z-index:20;position:absolute;border:0;top:-14px;left:120px;
+} 
+
+/*CSS3 extras*/ 
+a.tooltip span 
+{
+    border-radius:2px; box-shadow: 0px 0px 8px 4px #666; /*opacity: 0.8;*/ 
+}
+

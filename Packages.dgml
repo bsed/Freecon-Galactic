@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Server.Tests" Label="Server.Tests" Category="Project" />
+    <Node Id="FakeItEasy 1.25.3" Label="FakeItEasy 1.25.3" Category="Package" />
+    <Node Id="Simulator" Label="Simulator" Category="Project" />
+    <Node Id="StackExchange.Redis 1.0.488" Label="StackExchange.Redis 1.0.488" Category="Package" />
+    <Node Id="Services.Web" Label="Services.Web" Category="Project" />
+    <Node Id="AutoMapper 4.1.0" Label="AutoMapper 4.1.0" Category="Package" />
+    <Node Id="Nancy 1.4.0" Label="Nancy 1.4.0" Category="Package" />
+    <Node Id="Nancy.Hosting.Self 1.4.0" Label="Nancy.Hosting.Self 1.4.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="StackExchange.Redis 1.0.481" Label="StackExchange.Redis 1.0.481" Category="Package" />
+    <Node Id="Client.States" Label="Client.States" Category="Project" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Server.MongoDB" Label="Server.MongoDB" Category="Project" />
+    <Node Id="MongoDB.Bson 2.2.2" Label="MongoDB.Bson 2.2.2" Category="Package" />
+    <Node Id="MongoDB.Driver 2.2.2" Label="MongoDB.Driver 2.2.2" Category="Package" />
+    <Node Id="MongoDB.Driver.Core 2.2.2" Label="MongoDB.Driver.Core 2.2.2" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Client.View.CefSharp" Label="Client.View.CefSharp" Category="Project" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="MasterServer" Label="MasterServer" Category="Project" />
+    <Node Id="EntityFramework 6.1.3" Label="EntityFramework 6.1.3" Category="Package" />
+    <Node Id="StackExchange.Redis 1.0.450" Label="StackExchange.Redis 1.0.450" Category="Package" />
+    <Node Id="Server.Managers" Label="Server.Managers" Category="Project" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Services.DBFiller" Label="Services.DBFiller" Category="Project" />
+    <Node Id="AutoMapper 4.2.1" Label="AutoMapper 4.2.1" Category="Package" />
+    <Node Id="EntityFramework 6.1.3" Label="EntityFramework 6.1.3" Category="Package" />
+    <Node Id="Server.Utilities" Label="Server.Utilities" Category="Project" />
+    <Node Id="CommonSerializer 1.0.1" Label="CommonSerializer 1.0.1" Category="Package" />
+    <Node Id="CommonSerializer.MsgPack.Cli 1.0.1" Label="CommonSerializer.MsgPack.Cli 1.0.1" Category="Package" />
+    <Node Id="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Label="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package" />
+    <Node Id="MsgPack 0.1.0.2011042300" Label="MsgPack 0.1.0.2011042300" Category="Package" />
+    <Node Id="MsgPack.Cli 0.6.5" Label="MsgPack.Cli 0.6.5" Category="Package" />
+    <Node Id="Server.Models" Label="Server.Models" Category="Project" />
+    <Node Id="AutoMapper 4.2.1" Label="AutoMapper 4.2.1" Category="Package" />
+    <Node Id="MongoDB.Bson 2.2.2" Label="MongoDB.Bson 2.2.2" Category="Package" />
+    <Node Id="MongoDB.Driver 2.2.1" Label="MongoDB.Driver 2.2.1" Category="Package" />
+    <Node Id="MongoDB.Driver.Core 2.2.1" Label="MongoDB.Driver.Core 2.2.1" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Client.Xna.Windows" Label="Client.Xna.Windows" Category="Project" />
+    <Node Id="Autofac 3.5.2" Label="Autofac 3.5.2" Category="Package" />
+    <Node Id="Autofac.Configuration 3.3.0" Label="Autofac.Configuration 3.3.0" Category="Package" />
+    <Node Id="AutoMapper 4.1.0" Label="AutoMapper 4.1.0" Category="Package" />
+    <Node Id="MemBus 3.0.1" Label="MemBus 3.0.1" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Client.Core" Label="Client.Core" Category="Project" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Core.Networking.Proto" Label="Core.Networking.Proto" Category="Project" />
+    <Node Id="AutoMapper 3.3.1" Label="AutoMapper 3.3.1" Category="Package" />
+    <Node Id="protobuf-linq 0.3.0" Label="protobuf-linq 0.3.0" Category="Package" />
+    <Node Id="protobuf-net 2.0.0.668" Label="protobuf-net 2.0.0.668" Category="Package" />
+    <Node Id="Reactive.Router" Label="Reactive.Router" Category="Project" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Server.Specs.Integration" Label="Server.Specs.Integration" Category="Project" />
+    <Node Id="Autofac 3.3.1" Label="Autofac 3.3.1" Category="Package" />
+    <Node Id="Autofac.Extras.FakeItEasy 3.0.2" Label="Autofac.Extras.FakeItEasy 3.0.2" Category="Package" />
+    <Node Id="AutoMapper 3.3.1" Label="AutoMapper 3.3.1" Category="Package" />
+    <Node Id="FakeItEasy 1.25.2" Label="FakeItEasy 1.25.2" Category="Package" />
+    <Node Id="FakeItEasy.Automocker 1.13.0" Label="FakeItEasy.Automocker 1.13.0" Category="Package" />
+    <Node Id="Machine.Specifications.Should-Signed 0.7.2" Label="Machine.Specifications.Should-Signed 0.7.2" Category="Package" />
+    <Node Id="Machine.Specifications-Signed 0.9.1" Label="Machine.Specifications-Signed 0.9.1" Category="Package" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Core.Utililities" Label="Core.Utililities" Category="Project" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Core.Networking.Models" Label="Core.Networking.Models" Category="Project" />
+    <Node Id="CommonSerializer 1.0.1" Label="CommonSerializer 1.0.1" Category="Package" />
+    <Node Id="CommonSerializer.MsgPack.Cli 1.0.1" Label="CommonSerializer.MsgPack.Cli 1.0.1" Category="Package" />
+    <Node Id="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Label="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package" />
+    <Node Id="MsgPack 0.1.0.2011042300" Label="MsgPack 0.1.0.2011042300" Category="Package" />
+    <Node Id="MsgPack.Cli 0.6.5" Label="MsgPack.Cli 0.6.5" Category="Package" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Core.Networking.Lidgren" Label="Core.Networking.Lidgren" Category="Project" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Core.Models" Label="Core.Models" Category="Project" />
+    <Node Id="AutoMapper 4.2.1" Label="AutoMapper 4.2.1" Category="Package" />
+    <Node Id="Machine.Specifications.Should-Signed 0.8.0" Label="Machine.Specifications.Should-Signed 0.8.0" Category="Package" />
+    <Node Id="Machine.Specifications-Signed 0.9.3" Label="Machine.Specifications-Signed 0.9.3" Category="Package" />
+    <Node Id="MongoDB.Bson 2.2.2" Label="MongoDB.Bson 2.2.2" Category="Package" />
+    <Node Id="MongoDB.Driver 2.2.1" Label="MongoDB.Driver 2.2.1" Category="Package" />
+    <Node Id="MongoDB.Driver.Core 2.2.1" Label="MongoDB.Driver.Core 2.2.1" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="protobuf-linq 0.3.0" Label="protobuf-linq 0.3.0" Category="Package" />
+    <Node Id="protobuf-net 2.0.0.668" Label="protobuf-net 2.0.0.668" Category="Package" />
+    <Node Id="Core" Label="Core" Category="Project" />
+    <Node Id="AutoMapper 4.2.1" Label="AutoMapper 4.2.1" Category="Package" />
+    <Node Id="protobuf-linq 0.3.0" Label="protobuf-linq 0.3.0" Category="Package" />
+    <Node Id="protobuf-net 2.0.0.668" Label="protobuf-net 2.0.0.668" Category="Package" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Server.App" Label="Server.App" Category="Project" />
+    <Node Id="Autofac 3.5.2" Label="Autofac 3.5.2" Category="Package" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Server.Specs" Label="Server.Specs" Category="Project" />
+    <Node Id="Autofac 3.5.2" Label="Autofac 3.5.2" Category="Package" />
+    <Node Id="Autofac.Extras.FakeItEasy 3.0.2" Label="Autofac.Extras.FakeItEasy 3.0.2" Category="Package" />
+    <Node Id="AutoMapper 3.3.1" Label="AutoMapper 3.3.1" Category="Package" />
+    <Node Id="FakeItEasy 1.25.2" Label="FakeItEasy 1.25.2" Category="Package" />
+    <Node Id="FakeItEasy.Automocker 1.13.0" Label="FakeItEasy.Automocker 1.13.0" Category="Package" />
+    <Node Id="Machine.Specifications.Runner.Utility 0.9.0" Label="Machine.Specifications.Runner.Utility 0.9.0" Category="Package" />
+    <Node Id="Machine.Specifications.Should-Signed 0.7.2" Label="Machine.Specifications.Should-Signed 0.7.2" Category="Package" />
+    <Node Id="Machine.Specifications-Signed 0.9.1" Label="Machine.Specifications-Signed 0.9.1" Category="Package" />
+    <Node Id="protobuf-linq 0.3.0" Label="protobuf-linq 0.3.0" Category="Package" />
+    <Node Id="protobuf-net 2.0.0.668" Label="protobuf-net 2.0.0.668" Category="Package" />
+    <Node Id="Rx-Core 2.2.5" Label="Rx-Core 2.2.5" Category="Package" />
+    <Node Id="Rx-Interfaces 2.2.5" Label="Rx-Interfaces 2.2.5" Category="Package" />
+    <Node Id="Rx-Linq 2.2.5" Label="Rx-Linq 2.2.5" Category="Package" />
+    <Node Id="Rx-Main 2.2.5" Label="Rx-Main 2.2.5" Category="Package" />
+    <Node Id="Rx-PlatformServices 2.2.5" Label="Rx-PlatformServices 2.2.5" Category="Package" />
+    <Node Id="Freecon Server" Label="Freecon Server" Category="Project" />
+    <Node Id="Autofac 3.5.2" Label="Autofac 3.5.2" Category="Package" />
+    <Node Id="AutoMapper 4.2.1" Label="AutoMapper 4.2.1" Category="Package" />
+    <Node Id="EntityFramework 6.1.3" Label="EntityFramework 6.1.3" Category="Package" />
+    <Node Id="Machine.Specifications.Should-Signed 0.8.0" Label="Machine.Specifications.Should-Signed 0.8.0" Category="Package" />
+    <Node Id="Machine.Specifications-Signed 0.9.0" Label="Machine.Specifications-Signed 0.9.0" Category="Package" />
+    <Node Id="mongocsharpdriver 1.8.3" Label="mongocsharpdriver 1.8.3" Category="Package" />
+    <Node Id="MongoDB.Bson 2.2.2" Label="MongoDB.Bson 2.2.2" Category="Package" />
+    <Node Id="MongoDB.Driver 2.2.1" Label="MongoDB.Driver 2.2.1" Category="Package" />
+    <Node Id="MongoDB.Driver.Core 2.2.1" Label="MongoDB.Driver.Core 2.2.1" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="Server.Tests" Target="FakeItEasy 1.25.3" Category="Installed Package" />
+    <Link Source="Simulator" Target="StackExchange.Redis 1.0.488" Category="Installed Package" />
+    <Link Source="Nancy.Hosting.Self 1.4.0" Target="Nancy 1.4.0" Category="Package Dependency" />
+    <Link Source="Services.Web" Target="AutoMapper 4.1.0" Category="Installed Package" />
+    <Link Source="Services.Web" Target="Nancy.Hosting.Self 1.4.0" Category="Installed Package" />
+    <Link Source="Services.Web" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Services.Web" Target="StackExchange.Redis 1.0.481" Category="Installed Package" />
+    <Link Source="Client.States" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="MongoDB.Driver 2.2.2" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.2" Target="MongoDB.Driver.Core 2.2.2" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver.Core 2.2.2" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="Server.MongoDB" Target="MongoDB.Driver 2.2.2" Category="Installed Package" />
+    <Link Source="Server.MongoDB" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Client.View.CefSharp" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="MasterServer" Target="EntityFramework 6.1.3" Category="Installed Package" />
+    <Link Source="MasterServer" Target="StackExchange.Redis 1.0.450" Category="Installed Package" />
+    <Link Source="Server.Managers" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Services.DBFiller" Target="AutoMapper 4.2.1" Category="Installed Package" />
+    <Link Source="Services.DBFiller" Target="EntityFramework 6.1.3" Category="Installed Package" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="CommonSerializer 1.0.1" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="MsgPack.Cli 0.6.5" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="CommonSerializer 1.0.1" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="MsgPack.Cli 0.6.5" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package Dependency" />
+    <Link Source="Server.Utilities" Target="CommonSerializer.MsgPack.Cli 1.0.1" Category="Installed Package" />
+    <Link Source="Server.Utilities" Target="MsgPack 0.1.0.2011042300" Category="Installed Package" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Driver.Core 2.2.1" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver.Core 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="Server.Models" Target="AutoMapper 4.2.1" Category="Installed Package" />
+    <Link Source="Server.Models" Target="MongoDB.Driver 2.2.1" Category="Installed Package" />
+    <Link Source="Server.Models" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Autofac.Configuration 3.3.0" Target="Autofac 3.5.2" Category="Package Dependency" />
+    <Link Source="Client.Xna.Windows" Target="Autofac.Configuration 3.3.0" Category="Installed Package" />
+    <Link Source="Client.Xna.Windows" Target="AutoMapper 4.1.0" Category="Installed Package" />
+    <Link Source="Client.Xna.Windows" Target="MemBus 3.0.1" Category="Installed Package" />
+    <Link Source="Client.Xna.Windows" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Client.Core" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="protobuf-linq 0.3.0" Target="protobuf-net 2.0.0.668" Category="Package Dependency" />
+    <Link Source="Core.Networking.Proto" Target="AutoMapper 3.3.1" Category="Installed Package" />
+    <Link Source="Core.Networking.Proto" Target="protobuf-linq 0.3.0" Category="Installed Package" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Reactive.Router" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Autofac.Extras.FakeItEasy 3.0.2" Target="Autofac 3.3.1" Category="Package Dependency" />
+    <Link Source="Autofac.Extras.FakeItEasy 3.0.2" Target="FakeItEasy 1.25.2" Category="Package Dependency" />
+    <Link Source="FakeItEasy.Automocker 1.13.0" Target="FakeItEasy 1.25.2" Category="Package Dependency" />
+    <Link Source="Machine.Specifications.Should-Signed 0.7.2" Target="Machine.Specifications-Signed 0.9.1" Category="Package Dependency" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Server.Specs.Integration" Target="Autofac.Extras.FakeItEasy 3.0.2" Category="Installed Package" />
+    <Link Source="Server.Specs.Integration" Target="AutoMapper 3.3.1" Category="Installed Package" />
+    <Link Source="Server.Specs.Integration" Target="FakeItEasy.Automocker 1.13.0" Category="Installed Package" />
+    <Link Source="Server.Specs.Integration" Target="Machine.Specifications.Should-Signed 0.7.2" Category="Installed Package" />
+    <Link Source="Server.Specs.Integration" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Core.Utililities" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="CommonSerializer 1.0.1" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="MsgPack.Cli 0.6.5" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="CommonSerializer 1.0.1" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="MsgPack.Cli 0.6.5" Category="Package Dependency" />
+    <Link Source="CommonSerializer.MsgPack.Cli 1.0.1" Target="Microsoft.IO.RecyclableMemoryStream 1.1.0.0" Category="Package Dependency" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Core.Networking.Models" Target="CommonSerializer.MsgPack.Cli 1.0.1" Category="Installed Package" />
+    <Link Source="Core.Networking.Models" Target="MsgPack 0.1.0.2011042300" Category="Installed Package" />
+    <Link Source="Core.Networking.Models" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Core.Networking.Lidgren" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Machine.Specifications.Should-Signed 0.8.0" Target="Machine.Specifications-Signed 0.9.3" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Driver.Core 2.2.1" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver.Core 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="protobuf-linq 0.3.0" Target="protobuf-net 2.0.0.668" Category="Package Dependency" />
+    <Link Source="Core.Models" Target="AutoMapper 4.2.1" Category="Installed Package" />
+    <Link Source="Core.Models" Target="Machine.Specifications.Should-Signed 0.8.0" Category="Installed Package" />
+    <Link Source="Core.Models" Target="MongoDB.Driver 2.2.1" Category="Installed Package" />
+    <Link Source="Core.Models" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+    <Link Source="Core.Models" Target="protobuf-linq 0.3.0" Category="Installed Package" />
+    <Link Source="protobuf-linq 0.3.0" Target="protobuf-net 2.0.0.668" Category="Package Dependency" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Core" Target="AutoMapper 4.2.1" Category="Installed Package" />
+    <Link Source="Core" Target="protobuf-linq 0.3.0" Category="Installed Package" />
+    <Link Source="Core" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Server.App" Target="Autofac 3.5.2" Category="Installed Package" />
+    <Link Source="Server.App" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Autofac.Extras.FakeItEasy 3.0.2" Target="Autofac 3.5.2" Category="Package Dependency" />
+    <Link Source="Autofac.Extras.FakeItEasy 3.0.2" Target="FakeItEasy 1.25.2" Category="Package Dependency" />
+    <Link Source="FakeItEasy.Automocker 1.13.0" Target="FakeItEasy 1.25.2" Category="Package Dependency" />
+    <Link Source="Machine.Specifications.Should-Signed 0.7.2" Target="Machine.Specifications-Signed 0.9.1" Category="Package Dependency" />
+    <Link Source="protobuf-linq 0.3.0" Target="protobuf-net 2.0.0.668" Category="Package Dependency" />
+    <Link Source="Rx-Core 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Linq 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-Linq 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-Main 2.2.5" Target="Rx-PlatformServices 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Interfaces 2.2.5" Category="Package Dependency" />
+    <Link Source="Rx-PlatformServices 2.2.5" Target="Rx-Core 2.2.5" Category="Package Dependency" />
+    <Link Source="Server.Specs" Target="Autofac.Extras.FakeItEasy 3.0.2" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="AutoMapper 3.3.1" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="FakeItEasy.Automocker 1.13.0" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="Machine.Specifications.Runner.Utility 0.9.0" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="Machine.Specifications.Should-Signed 0.7.2" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="protobuf-linq 0.3.0" Category="Installed Package" />
+    <Link Source="Server.Specs" Target="Rx-Main 2.2.5" Category="Installed Package" />
+    <Link Source="Machine.Specifications.Should-Signed 0.8.0" Target="Machine.Specifications-Signed 0.9.0" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver 2.2.1" Target="MongoDB.Driver.Core 2.2.1" Category="Package Dependency" />
+    <Link Source="MongoDB.Driver.Core 2.2.1" Target="MongoDB.Bson 2.2.2" Category="Package Dependency" />
+    <Link Source="Freecon Server" Target="Autofac 3.5.2" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="AutoMapper 4.2.1" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="EntityFramework 6.1.3" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="Machine.Specifications.Should-Signed 0.8.0" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="mongocsharpdriver 1.8.3" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="MongoDB.Driver 2.2.1" Category="Installed Package" />
+    <Link Source="Freecon Server" Target="Newtonsoft.Json 8.0.3" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

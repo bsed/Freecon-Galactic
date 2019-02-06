@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB994649-5DCF-4F96-B7BA-AA9B1FC6CE07}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Simulator</RootNamespace>
+    <AssemblyName>Simulator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameStateUpdater.cs" />
+    <Compile Include="Managers\StructureManager.cs" />
+    <Compile Include="RedisNetworkingService.cs" />
+    <Compile Include="MainManager.cs" />
+    <Compile Include="Simulator_Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulatorGameTimeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Client.Config\Client.Config.csproj">
+      <Project>{8e010a3f-7dad-40c8-ac2b-86960b3c8152}</Project>
+      <Name>Client.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configs\Server.Configs.csproj">
+      <Project>{4bc58f89-d95f-4682-9422-7d355765aa84}</Project>
+      <Name>Server.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Configs\Core.Configs.csproj">
+      <Project>{f8953f1b-016e-4103-85ab-a80dc44d13fd}</Project>
+      <Name>Core.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
+      <Project>{56be3d9c-b42b-4f0f-bcf4-2889c58e55f2}</Project>
+      <Name>Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Logging\Core.Logging.csproj">
+      <Project>{97ea713f-516d-4e5d-a23b-73e96079c074}</Project>
+      <Name>Core.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Models.Enums\Core.Models.Enums.csproj">
+      <Project>{51ec19fa-7d49-434e-a835-2c51b00a7da7}</Project>
+      <Name>Core.Models.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Utils\Core.Utililities.csproj">
+      <Project>{6b6053ac-7a8f-4dba-b472-15b92c6ae0ac}</Project>
+      <Name>Core.Utililities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Client.Core\Client.Core.csproj">
+      <Project>{7d550853-7520-4012-bbf0-d6a97b4fa8ba}</Project>
+      <Name>Client.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Client.GameStates\Client.States.csproj">
+      <Project>{38be3fc8-42a9-4cee-b0ab-98230e9bc3e1}</Project>
+      <Name>Client.States</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Client.StateBuilder\Client.StateBuilders.csproj">
+      <Project>{A956475D-1C1B-4C2E-BCF4-7B1DFD06B183}</Project>
+      <Name>Client.StateBuilders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Client.View.Awesomium\Client.View.CefSharp.csproj">
+      <Project>{e172c75c-1249-4ae9-ab0f-68c89ae46670}</Project>
+      <Name>Client.View.CefSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Client.ViewModel\Client.ViewModel.csproj">
+      <Project>{907a26fa-ef2a-47a0-b2e0-53d4064b411c}</Project>
+      <Name>Client.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core.Networking.Messages\Core.Networking.Messages.csproj">
+      <Project>{5c288ffd-574f-4984-88b5-39d8ffdf0111}</Project>
+      <Name>Core.Networking.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core.Networking.Objects\Core.Networking.Objects.csproj">
+      <Project>{1771faf4-2f90-45fd-a3a9-e8a9b4fd90ba}</Project>
+      <Name>Core.Networking.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core\Core.csproj">
+      <Project>{8b2a8553-3b05-4253-bdbe-7021155cd1a2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Models\Core.Models.csproj">
+      <Project>{7163a171-74b1-4fb9-9cd3-72b59c09f7a4}</Project>
+      <Name>Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Networking\Core.Networking.csproj">
+      <Project>{530534f3-b57e-49ae-97cf-2675ea6359c1}</Project>
+      <Name>Core.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren\Lidgren\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{49ba1c69-6104-41ac-a5d8-b54fa9f696e8}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedisWrapper\Server.RedisWrapper.csproj">
+      <Project>{6c0a5ed3-8c6f-4cac-b9bb-4c0866d45cf3}</Project>
+      <Name>Server.RedisWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Console\Server.Console.csproj">
+      <Project>{5b8733f8-69d6-4545-9a7e-b3f44d7c9105}</Project>
+      <Name>Server.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

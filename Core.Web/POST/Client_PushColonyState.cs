@@ -1,0 +1,4 @@
+﻿namespace Core.Web.Get
+{
+
+}

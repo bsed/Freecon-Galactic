@@ -1,0 +1,52 @@
+﻿message SystemData
+{
+	required string SystemName = 1;
+	required int32 AreaSize = 2;
+	required StarData Star = 3;
+	repeated PlanetData Planets = 4;
+
+};
+
+
+
+message StarData
+{
+	required int32 Size = 1;
+	required int32 Mass = 2;
+	required int32 Gravity = 3;
+};
+
+
+message PlanetData
+{
+	required int32 Mass = 1;
+	required int32 Gravity = 2;
+	required int32 Scale = 3;
+	required bytes PlanetType =4;
+	required int32 IDToOrbit = 5;
+	required int32 Id = 6;
+	
+
+};
+
+
+message MoonData
+{
+	required bytes PlanetType =4;
+	required int32 IDToOrbit = 5;
+	required int32 Id = 6;
+};
+
+message WarpholeData
+{
+
+
+};
+
+message StructureData
+{
+
+
+};
+
+

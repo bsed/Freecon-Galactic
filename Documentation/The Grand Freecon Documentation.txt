@@ -1,0 +1,178 @@
+I. Overview
+	Freecon Galactic is a 2D, top-down, space exploration themed, massively multiplayer, real time strategy and combat experience. The general concepts center on planet colonization/capture, ship customization, and space combat, with in-game content generated predominantly by user interaction, facilitated by in-game trading of user-exploited, produced, and manufactured resources, and an associated economy enabled by free trade amongst users. The user experience is designed to be predominantly cooperative, and cooperation is encouraged by allowing users to organize into in-game organizations known as factions, although we will attempt to provide a somewhat balanced solo play option. Many of the gameplay concepts behind Freecon have been inspired by a similar online game known as Starport: Galactic Empires. While the back end design of Freecon is approaching a releasable state, major gameplay themes and implementation are currently evolving and will be finalized and balanced in the near future. 
+
+	Freecon Galactic has been under development since 2011, and while the codebase depends on a number of open source libraries, it is currently closed-source, although this may change in the future. The development of Freecon Galactic is the product of a mostly part-time collaborative effort between Johnathan Free Wortley (@freeqaz) and Ilaan Shtaygrud (@ALLYOURBASE), with minor contributions from other developers/artists, particularly Milay ___ (@milaysvk, 3D models), Jake ___(@???), ADD OTHERS?
+
+	This documentation is intended to be a resource for developers, and describes the general structure of the Freecon codebase. While occasional partial code implementation samples will be provided, it is up to the user to consult the existing code for fully working examples.
+
+II. Architecture and Networking
+	II-1. Overview
+		The codebase is divided into four primary components: 
+			1. Freecon.Client, which, in typical fashion, acts as the primary interface between the user and the game. Presently, physics in Freecon is client-side, although client data is validated on the server to deter hacking.
+			2. Freeon.Server, controls game data flow, validation, and storage, and enables/validates major game-related business logic. Multiple instances of the server are spawned and generally handle clients independently, with minimal server-server interaction detailed elsewhere. 
+			3. Freecon.Web, a lightweight, standalone service designed to process client logins, fetch certain long-running data queries for clients, and handle certain UI-related interaction.
+			4. Freecon.Simulator, a standalone service which inherits heavily from Freecon.Client, handling all NPC logic and physics simulation. Multiple simulator instances are spawned and operate independently, communicating with assigned server instances in a manner resembling instances of the client.
+
+		The evolution of the codebase is tied intimately to the growth of the contributors as general software developers. As such, while the code has been refactored on numerous occasions to simplify maintainability, reuse, and extensibility, there still exist pockets of older code which do not wholly conform to design patterns. Further, our incremental standards improvement, coupled with the varied functions of different parts of the code, has resulted in some inconsistency of design pattern application among the many components of Freecon. Individually, however these components are relatively consistent in their design, and homogenization of the codebase is ongoing.
+
+	II-2. Networking
+		Communication among the various Freecon subprocesses is facilitated by two open source libraries coupled to our own data/execution wrappers.
+		
+		II-2-a. Data Encapsulation
+			All transmitted data, serverside and server-client, is encapsulated into classes which derive from the abstract MessagePackSerializableObject class, which automates serialization of message data in preparation for transmission. Network data is subdivided into a set of message types, described by the MessageTypes enum, and all message types must implement their own MessagePackSerializableObject derived classes. This forces rigorous standardization and reusability of data transmission protocol and prevents errors derived from hand serializing/deserializing. Transmission of MessagePackSerializableObject derived message classes is further encapsulated by the NetworkMessageContainer class, which forms the primary transmitted data container and contains the following public data:
+
+				NetworkMessageContiner:
+				{
+					MessageTypes MessageType; //The type of the message, used as a header for properly processing messages
+
+					MessagePackSerializableObject MessageData; //The data to be processed
+					
+					int? TargetAreaID; //Used for routing simulator-bound data
+
+				}	
+
+			Once the associated classes are implemented, transmission of data occurs in three steps: the MessagePackSerializableObject-derived data class is instantiated and populated, a NetworkMessageContainer object is instantiated with the MessageType and MessageData set appropriately, and the NetworkMessageContainer object is then passed to a message router, as detailed below.	
+			
+		II-2-b. Serverside Networking with Redis
+			Serverside communication within the context of the Freecon Galactic architecture consists of three pairs of application interaction: Freecon.Server-Freecon.Server, Freecon.Server-Services.Web, and Freecon.Server-Services.Simulator. These interactions are enabled by the open source Redis library, which routes NetworkMessageContainer messages via the pub/sub functionality of Redis. To simplify operation, the lightweight project Freecon.RedisWrapper contains the class RedisServer, which abstractifies subscription to redis channels and publication of NetworkMessageContainer objects. 
+			Redis channels in Freecon are combinations of values of the MessageTypes enum and unique server instance Ids. NetworkMessageContainer objects are routed according to their NetworkMessageContainer.MessageType values and additional information provided during publishing. To send a NetworkMessageContainer via RedisServer, after instantiating RedisServer, the following non-static methods are called:
+
+				RedisServer
+				{
+					//Publishes the message to the specified channel. Broadcasts messages to all entities subscribed to channel
+					RedisServer.PublishObject(MessageTypes channel, NetworkMessageContainer msg)
+					
+					//Publishes the message, broadcasting messages to all entities subscribed to the given combination of channelType and channelId
+					RedisServer.PublishObject(ChannelTypes channelType, int channelId, NetworkMessageContainer msg)	
+				}
+
+			MessageTypes enum values which specify messages bound for other servers are prefixed by the string "Redis_", e.g. MessageTypes.Redis_ClientHandoff. Presently, the overload PublishObject(ChannelTypes channelType, int channelId, NetworkMessageContainer msg) is used to route messages to instances of Freecon.Simulator which target specific areas or simulators, however other extensions are possible as necessary.
+			
+			Server messages are recieved and processed with event handlers of the signature EventHandler<NetworkMessageContainer>, with the following two non-static methods, which correspond to the publish methods above:
+			
+				RedisServer
+				{
+					Subscribe(MessageTypes channel, EventHandler<NetworkMessageContainer> callback)
+				
+					Subscribe(ChannelTypes channelType, int channelID, EventHandler<NetworkMessageContainer> callback)
+				}
+			
+			Serialization and deserialization of NetworkMessageContainer objects is managed internally by RedisWrapper, and the event handlers registered on subscription receive deserialized NetworkMessageContainer objects.
+			
+			In the Services.Simulator and Freecon.Client codebases, subscription is further hidden behind the INetworkingService interface to enable code reuse with alternative networking protocols.
+			
+		II-2-c. Server-Client Networking with Lidgren
+			All data transmission between server and client, excepting interactions between the client and instances of Services.Web, occurs through the open source Lidgren networking library. Message routing is simpler in that messages are routed entirely by Lidgren using internally established connections with clients. Encapsulation of data is as described above, except messages are internally serialized/deserialized to Lidgren NetOutgoingMessage and NetIncomingMessage objects internally. Within Freecon.Server, messages are sent using instances of LidgrenOutgoingMessageService, and within Freecon.Client, by instances of LidgrenMessenger.
+		
+III. Freecon.Server
+	III-1. Overview
+		As the backend of Freecon Galactic, the primary responsibilities of Freecon.Server are storing/validating game object state, executing busines logic based on client input data, and relaying appropriate data to clients. These responsibilities may be divided into two general functions: processing incoming client messages, and serverside updating of in-game objects. Because of the necessity of creating a low latency real-time gaming experience while handling potentially large amounts of CPU-bound processing, client message processing occurs in a constant polling loop, with received messages immediately routed to unique threads for processing. This naturally creates a concurrent system, and certain designs have been implemented to limit bugs introduced by concurrent processing of messages which may attempt to access and/or modify data concurrently. If major concurrency bugs arise and cannot be easily rectified, the server may be modified to process messages serially.
+		
+		Gameplay in Freecon occurs in a large galaxy, which consists of independent, interconnected planetary systems (represented by the class PSystem) within and among which clients are free to move. Because almost all gameplay interactions are limited to individual planetary systems, most server logic may be easily split among the mostly independent PSystem objects. To take advantage of the generally parallel flow of incoming game data, Freecon.Server has been designed for the spawning of multiple server instances, each instance responsible for a limited number of total planetary systems.   
+		
+		
+		
+	Server
+•	Overview
+•	General Architecture
+•	Database IO
+•	Redis
+•	Master/Slave
+•	Managers
+•	Objects
+o	Partial MVVM
+•	Networking
+•	Concurrency/Synchronization
+•	Debugging
+•	Utilities
+•	Pitfalls
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+•	General Description of Freecon
+•	Introduction to overall architecture
+•	History of code?
+•	Coding Challenges and Solutions
+o	Concurrency/MultiThreading
+o	State Management/Corruption
+o	Synchronization Intro
+
+Networking Architecture
+•	Overview
+
+Client
+•	Overview
+•	MVVM
+•	UI
+•	Networking		
+•	States
+•	Debugging
+•	Utilities
+•	UI/Awesomium
+•	Physics Engine/Farseer
+•	Pitfalls
+o	Farseer Bugs
+
+Server
+•	Overview
+•	General Architecture
+•	Database IO
+•	Redis
+•	Master/Slave
+•	Managers
+•	Objects
+o	Partial MVVM
+•	Networking
+•	Concurrency/Synchronization
+•	Debugging
+•	Utilities
+•	Pitfalls
+
+Nancy
+•	Overview
+•	DB interaction/Data loading
+•	Login Handling/Encryption
+Simulator
+•	Overview
+•	Spawning a simulator process
+•	Concurrency/State Independence
+•	Networking/Redis
+•	GameStates
+o	Variable update timing
+o	AreaID
+

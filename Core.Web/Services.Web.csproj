@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CD17D8D-4F49-480E-9162-65CD9B14B85D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core.Web</RootNamespace>
+    <AssemblyName>Core.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomBootstrapper.cs" />
+    <Compile Include="DBStateResolver.cs" />
+    <Compile Include="FreeconWebExtensions.cs" />
+    <Compile Include="Get\Client_HoldingsDataResponse.cs" />
+    <Compile Include="Get\Client_ColonyDataResponse.cs" />
+    <Compile Include="NancyConfig.cs" />
+    <Compile Include="MockResponses.cs" />
+    <Compile Include="Modules\BaseHandler.cs" />
+    <Compile Include="Modules\AdminHandler.cs" />
+    <Compile Include="Modules\FreeconJsonResponse.cs" />
+    <Compile Include="Modules\GalaxyHandler.cs" />
+    <Compile Include="Modules\LoginHandler.cs" />
+    <Compile Include="Post\FreeconPostBody.cs" />
+    <Compile Include="Post\RoutedMessage.cs" />
+    <Compile Include="NancyMain.cs" />
+    <Compile Include="Modules\HoldingsHandler.cs" />
+    <Compile Include="Modules\ColonyHandler.cs" />
+    <Compile Include="Modules\PortHandler.cs" />
+    <Compile Include="Post\Client_PushColonyState.cs" />
+    <Compile Include="Post\WarpPlayerRequest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedisBasedKeyGenerator.cs" />
+    <Compile Include="RedisStateManager.cs" />
+    <Compile Include="RouteConfig.cs" />
+    <Compile Include="Schemas\Galaxy\WebGalaxy.cs" />
+    <Compile Include="WebConfig.cs" />
+    <Compile Include="Schemas\Colony\ClientColonyPages.cs" />
+    <Compile Include="Schemas\Colony\ClientFullColonyStateDataResponse.cs" />
+    <Compile Include="Schemas\Colony\ColonyMetaData.cs" />
+    <Compile Include="Schemas\Colony\ColonyOverviewPageData.cs" />
+    <Compile Include="Schemas\Components\StatDisplay.cs" />
+    <Compile Include="Schemas\Components\StatDisplayTypes.cs" />
+    <Compile Include="Schemas\Components\TimeUnits.cs" />
+    <Compile Include="Schemas\Colony\ColonyPages.cs" />
+    <Compile Include="Schemas\Colony\ImageAsset.cs" />
+    <Compile Include="Schemas\Interfaces\IColonyPage.cs" />
+    <Compile Include="Schemas\Port\ComponentPortGood.cs" />
+    <Compile Include="Schemas\Port\IPortGood.cs" />
+    <Compile Include="Schemas\Port\IPortGoodCategory.cs" />
+    <Compile Include="Schemas\Port\ModulePortGood.cs" />
+    <Compile Include="Schemas\Port\PortGood.cs" />
+    <Compile Include="Schemas\Port\PortGoodCategory.cs" />
+    <Compile Include="Schemas\Port\PortStateDataResponse.cs" />
+    <Compile Include="Schemas\Port\ResourcePortGood.cs" />
+    <Compile Include="Schemas\Port\ShipPortGood.cs" />
+    <Compile Include="Schemas\Port\WeaponPortGood.cs" />
+    <Compile Include="Schemas\Colony\StatusIndicatorData.cs" />
+    <Compile Include="Schemas\WebColors.cs" />
+    <Compile Include="Schemas\Colony\WebConstructionData.cs" />
+    <Compile Include="Schemas\Colony\WebStructureInfo.cs" />
+    <Compile Include="Schemas\Colony\WebStructureOverviewData.cs" />
+    <Compile Include="Schemas\Colony\WebStructuresOverviewData.cs" />
+    <Compile Include="StatusCodes\StatusCodeHandler.cs" />
+    <Compile Include="TestHandler.cs" />
+    <Compile Include="WebUserIdentity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Configs\Server.Configs.csproj">
+      <Project>{4bc58f89-d95f-4682-9422-7d355765aa84}</Project>
+      <Name>Server.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Cryptography\Core.Cryptography.csproj">
+      <Project>{8d7bd1ad-0eb8-48d2-aadc-9253a66e0aed}</Project>
+      <Name>Core.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Interfaces\Core.Interfaces.csproj">
+      <Project>{56be3d9c-b42b-4f0f-bcf4-2889c58e55f2}</Project>
+      <Name>Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Logging\Core.Logging.csproj">
+      <Project>{97ea713f-516d-4e5d-a23b-73e96079c074}</Project>
+      <Name>Core.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Models.Enums\Core.Models.Enums.csproj">
+      <Project>{51ec19fa-7d49-434e-a835-2c51b00a7da7}</Project>
+      <Name>Core.Models.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Utils\Core.Utililities.csproj">
+      <Project>{6b6053ac-7a8f-4dba-b472-15b92c6ae0ac}</Project>
+      <Name>Core.Utililities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core.Networking.Messages\Core.Networking.Messages.csproj">
+      <Project>{5c288ffd-574f-4984-88b5-39d8ffdf0111}</Project>
+      <Name>Core.Networking.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core.Networking.Objects\Core.Networking.Objects.csproj">
+      <Project>{1771faf4-2f90-45fd-a3a9-e8a9b4fd90ba}</Project>
+      <Name>Core.Networking.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Core\Core.csproj">
+      <Project>{8b2a8553-3b05-4253-bdbe-7021155cd1a2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Models\Core.Models.csproj">
+      <Project>{7163a171-74b1-4fb9-9cd3-72b59c09f7a4}</Project>
+      <Name>Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Networking\Core.Networking.csproj">
+      <Project>{530534f3-b57e-49ae-97cf-2675ea6359c1}</Project>
+      <Name>Core.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freecon.Server.Core\Server.Core.csproj">
+      <Project>{e341870f-b23f-4979-83b7-2467135cfc62}</Project>
+      <Name>Server.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren\Lidgren\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{49ba1c69-6104-41ac-a5d8-b54fa9f696e8}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedisWrapper\Server.RedisWrapper.csproj">
+      <Project>{6c0a5ed3-8c6f-4cac-b9bb-4c0866d45cf3}</Project>
+      <Name>Server.RedisWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Managers\Server.Managers.csproj">
+      <Project>{9b166030-f3f8-4363-ac51-1b649d720b9d}</Project>
+      <Name>Server.Managers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Models\Server.Models.csproj">
+      <Project>{468b051a-ef18-4404-8ebe-158f1c3ee07d}</Project>
+      <Name>Server.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.MongoDB\Server.MongoDB.csproj">
+      <Project>{d59b444f-bae5-48eb-a17f-56bd6d4b5108}</Project>
+      <Name>Server.MongoDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

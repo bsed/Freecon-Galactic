@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AntiCheat.ProcessScanner" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAGAAAABAIAAAAAAAAAAAEAAAIAAAAAAAAIA=</HashCode>
+      <FileName>Base\AntiCheat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Main" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUBENNgIIIIIwwAgKGAYACAAGHkAA6RQgVnxUgpMAU=</HashCode>
+      <FileName>Base\Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Program" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Base\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Networking.MessageManager" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEBAAAIhAAAAAAAAAARAAAAAAAAIAAmQgAAAABA=</HashCode>
+      <FileName>Managers\ChatManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Networking.ClientManager" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAIAAAAAAAAAAAAEAAAAAQAgAAAAABAAABAA=</HashCode>
+      <FileName>Managers\Networking\ClientManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.ChatManager" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQgQEAEMigAACwAAAEAACCBKAAAgAESAEBCIGEBAAg=</HashCode>
+      <FileName>Managers\ChatManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GalaxyManager" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Managers\GalaxyManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.TurretManager" Collapsed="true">
+    <Position X="23" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAhCAAAAAAAAAAACAAAAAAACAAQAAAAA=</HashCode>
+      <FileName>Managers\Invasion\TurretManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.KeyboardManager" Collapsed="true">
+    <Position X="24.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAgEIgCQAQAIAAAAAQARACIQkAAAAAAAAAIAAg=</HashCode>
+      <FileName>Managers\KeyboardManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.KeyBind" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Managers\KeyboardManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.LevelManager" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgBAAAAQAAAIAAACEAAAAAAAAAAQQAAEQCECAgAAA=</HashCode>
+      <FileName>Managers\LevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Logger" Collapsed="true">
+    <Position X="30" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAICAAAAAAAAAIgAAAQAAAAAAA=</HashCode>
+      <FileName>Managers\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.MouseManager" Collapsed="true">
+    <Position X="24.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Managers\MouseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.ParticleManager" Collapsed="true">
+    <Position X="23" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACSAoAAAEQAAAoAAAAAQACAAABAAAAAAAAEEDEAAoAA=</HashCode>
+      <FileName>Managers\ParticleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.PhysicsManager" Collapsed="true">
+    <Position X="24.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\PhysicsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.ProjectileManager" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFwAgkAAAFAAAoAADAGUQAhAEQAGgCKACIQBwCAABAA=</HashCode>
+      <FileName>Managers\ProjectileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.ResourceManager" Collapsed="true">
+    <Position X="31.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\ResourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.SettingsManager" Collapsed="true">
+    <Position X="23" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAABAAAAgAAAEAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\SettingsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.ShipManager" Collapsed="true">
+    <Position X="24.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAIAAgAAEGioACYBABQADCgARgCAIgEhgAEAAEAAg=</HashCode>
+      <FileName>Managers\ShipManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.SpaceManager" Collapsed="true">
+    <Position X="26.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAygAAAAAAAAAgQAIAQAAAAAAIAAEAAAABAFBABAIAA=</HashCode>
+      <FileName>Managers\SpaceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GameStateManager" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAIA=</HashCode>
+      <FileName>Managers\States\GameStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.TileEditorManager" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAoAIAAAAkAAAAAAAAAQAAAAABBAAAAABGBQIAA=</HashCode>
+      <FileName>Managers\States\TileEditorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.TextureManager" Collapsed="true">
+    <Position X="31.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAEBMAAAgIgAQALkhAEAAAQBQIAwIAQcghECAAsBAAA=</HashCode>
+      <FileName>Managers\TextureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.UserDataManager" Collapsed="true">
+    <Position X="24.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\UserDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.BodyDataObject" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\UserDataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.DebugTextManager" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQKgAABAAAAAgEAAAAIAABAAAgAAIAKFBAAAgAoAAg=</HashCode>
+      <FileName>Managers\GUI\DebugTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.Bar" Collapsed="true">
+    <Position X="5.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\GUI\Framework\Bar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.BaseControl" Collapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IASAAACIAAAAAxACEADAACACBAAEgCAAAAIQAAGUgAA=</HashCode>
+      <FileName>Managers\GUI\Framework\BaseControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.BaseForm" Collapsed="true">
+    <Position X="7.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YASAAQAASAAAA1ACEADAADKCJADEgCAACAIABAGUgAw=</HashCode>
+      <FileName>Managers\GUI\Framework\BaseForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.BaseUI" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQQAAOAIAhAEk4BIkCJEAASKDgGEAiMoBAIIDQGeEQE=</HashCode>
+      <FileName>Managers\GUI\Framework\BaseUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.Button" Collapsed="true">
+    <Position X="0.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Managers\GUI\Framework\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.Label" Collapsed="true">
+    <Position X="3" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\GUI\Framework\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.StandardForm" Collapsed="true">
+    <Position X="7.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\GUI\Framework\StandardForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.GUI.HudElementManager" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ATQCQGEAE8AaAoGYBAAhxAGBEAQJTnLBQMhhgk35MzE=</HashCode>
+      <FileName>Managers\GUI\HudElementManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.HudManager" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAAwEAAAAAgABAAAAQAAAEEBEAAgAAAAw=</HashCode>
+      <FileName>Managers\GUI\HudManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.LoadingManager" Collapsed="true">
+    <Position X="28.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAEAAAQAAAAgAAAAAAAAAAAAhAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Managers\GUI\LoadingManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.LoginManager" Collapsed="true">
+    <Position X="31.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAABAgAAAAAAhAQACACQAQAAAAAAAAAAAgA=</HashCode>
+      <FileName>Managers\GUI\LoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.Button" Collapsed="true">
+    <Position X="30" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAgAAAAAIAAAAAAAABAAAAAEAAAAAAIAA=</HashCode>
+      <FileName>Managers\GUI\LoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.Window" Collapsed="true">
+    <Position X="30" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAgAAABAgAiAEAAIAIAAAAAAAQAAAAQCAAAAAQAA=</HashCode>
+      <FileName>Managers\GUI\LoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.LoginWindow" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAEAAAIAAAAQAAABCAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Managers\GUI\LoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.GUI.RadarManager" Collapsed="true">
+    <Position X="26.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAYsIAABAQAIAAAEAgAAAAQQIAgMgAAkAAAUAAAgk=</HashCode>
+      <FileName>Managers\GUI\Space\RadarManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.NewBuildingManager" Collapsed="true">
+    <Position X="26.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewBuildingManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.Building" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewBuildingManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.NewDefenceManager" Collapsed="true">
+    <Position X="28.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewDefenceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.Defence" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewDefenceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.NewInvasionManager" Collapsed="true">
+    <Position X="30" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewInvasionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Invasion.NewTileManager" Collapsed="true">
+    <Position X="31.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewTileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Space.BorderManager" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAggAAAEAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Space\BorderManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Space.GravityManager" Collapsed="true">
+    <Position X="31.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAASAAAAAAAAAAABAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Managers\Space\GravityManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Space.SpaceObjectManager" Collapsed="true">
+    <Position X="28.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>I0wABQAAABCBAgAGIgAgABDEBMEYEEiBAk0BCGDAAwQ=</HashCode>
+      <FileName>Managers\Space\SpaceObjectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.Space.WarpHoleManager" Collapsed="true">
+    <Position X="28.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAgAEAAAAAAAAAAgAEEAAAAAIAAAAAAA=</HashCode>
+      <FileName>Managers\Space\WarpHoleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.InvasionManager" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAwAAAAAIAAAAAAAABCAAAAASAAAgAQA=</HashCode>
+      <FileName>Managers\States\InvasionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.MSBManager" Collapsed="true">
+    <Position X="5.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEMAAAAAAAAAAAEAAIAAAFECgAAEBQIAAAAA=</HashCode>
+      <FileName>Managers\States\MSBManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.PortStateManager" Collapsed="true">
+    <Position X="31.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAgAAAgAAUAEAAAAAIAAAAAAEABGAAAAAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.PortShip" Collapsed="true">
+    <Position X="30" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.Service" Collapsed="true">
+    <Position X="13.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAgAAAAAEAAgAAAAAAAAACAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.HullRepair" Collapsed="true">
+    <Position X="13.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.Good" Collapsed="true">
+    <Position X="1.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAIAAAAgAAAAAEAAwAAAAAIAAAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.ShipGood" Collapsed="true">
+    <Position X="0.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAQAAAAAQCAAAAAAACAAAAAAAQCAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.Woman" Collapsed="true">
+    <Position X="2.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\States\PortStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Managers.States.SpaceStateManager" Collapsed="true">
+    <Position X="5.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IASgQAAAAAEBAgQBAAAEAAAQAYAAEAAIgBRQBEAAAAQ=</HashCode>
+      <FileName>Managers\States\SpaceStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Background" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAABAQIgAAAAAAAAAAQggAAAAACABRAGAACAA=</HashCode>
+      <FileName>Mathematics\Background.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Camera2D" Collapsed="true">
+    <Position X="31.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAIAAIIQQEQAAACAEQECAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Mathematics\Camera2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.ParseBitmap" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAEoAAAAAAAAEAAAAAAAAAAAAAAAEACAAAACgAASgAw=</HashCode>
+      <FileName>Mathematics\ParseBitmap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.PlanetLevel" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAQAoQLABAwABhAAACyAEAgEACAAAAAiAAA=</HashCode>
+      <FileName>Mathematics\PlanetLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.RenderingMath" Collapsed="true">
+    <Position X="28.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAEAAAAAAAAIAAAAAgQAAACA=</HashCode>
+      <FileName>Mathematics\RenderingMath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.RenderLevel" Collapsed="true">
+    <Position X="30" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAAAEhAAEAIQAAgAAAAIAAAAAAAAAAAAgAQ=</HashCode>
+      <FileName>Mathematics\RenderLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Effects.BloomComponent" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAIAQQAAAAMAgSSRAAAShQAAACEAACAgAaACACAAAA=</HashCode>
+      <FileName>Mathematics\Effects\BloomComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Effects.BloomSettings" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAAAACBAAAAAAQAAAAAAACAAAAAQAAAAQA=</HashCode>
+      <FileName>Mathematics\Effects\BloomSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Space.Boundaries" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Mathematics\Space\Boundaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.Space.RotationalCamera" Collapsed="true">
+    <Position X="17.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Mathematics\Space\RotationalCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.TileEditor.EditorInput" Collapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASIAABAAAAAAAEAAAAwAAAEAAAAgQAAAABAAAAgAAg=</HashCode>
+      <FileName>Mathematics\TileEditor\EditorInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.TileEditor.ParsePNG" Collapsed="true">
+    <Position X="21.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAAAAAAAIAAAgAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Mathematics\TileEditor\ParsePNG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.TileEditor.SelectionHUD" Collapsed="true">
+    <Position X="19.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQCgIAAAQAAAgIAQAgAwgAAABAICAAAAAAAAkAAAAA=</HashCode>
+      <FileName>Mathematics\TileEditor\SelectionHUD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.TileEditor.SelectTile" Collapsed="true">
+    <Position X="21.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAAAAAAgAAAAAAAAAAABAAAAAAAQABAAAAAA=</HashCode>
+      <FileName>Mathematics\TileEditor\SelectTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Mathematics.TileEditor.XMLSaver" Collapsed="true">
+    <Position X="31.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAABAAAAgACEAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Mathematics\TileEditor\XMLSaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.GenerationStar" Collapsed="true">
+    <Position X="30" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAgAAAAAAEAEBAACCgAAAAgEAAACQACAA=</HashCode>
+      <FileName>Objects\GenerationStar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Tile" Collapsed="true">
+    <Position X="17.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Invasion\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Turret" Collapsed="true">
+    <Position X="21.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAACAAgAAAAAAAAAAAAAAgRAAgQABAAQAAAg=</HashCode>
+      <FileName>Objects\Invasion\Turret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.MinimapPlanet" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAABBAAAAAKACAEABAgAEAAAATAJAAgA=</HashCode>
+      <FileName>Objects\MinimapPlanet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Module" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAICAAAAAAAAJAgEgAAAAAAAAAIA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.EnergyRegenModule" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.ThrustModule" Collapsed="true">
+    <Position X="9.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.MaxShieldModule" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.ShieldRegenModule" Collapsed="true">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.MaxEnergyModule" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.ObjInView" Collapsed="true">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\ObjInView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Planet" Collapsed="true">
+    <Position X="10.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAgAAAAAgAhBAAACwKACCUAAAgAEAAAARABAAgA=</HashCode>
+      <FileName>Objects\Planet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Port" Collapsed="true">
+    <Position X="10.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Port.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.QueuedMissile" Collapsed="true">
+    <Position X="23" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAACAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\QueuedMissile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.QueuedPlanet" Collapsed="true">
+    <Position X="24.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhBAAAAAKACCUAAAgAEAAAATABAAgA=</HashCode>
+      <FileName>Objects\QueuedPlanet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Penguin" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Barge" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Battlecruiser" Collapsed="true">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Reaper" Collapsed="true">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Dread" Collapsed="true">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.StatHoldingShip" Collapsed="true">
+    <Position X="30" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAQAEAAAQAgAABAAAIEIBQAAAAgACABIAAkAAAABAA=</HashCode>
+      <FileName>Objects\Ships\Inherited Ships.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Mothership" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIQAABABAAACICAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\Mothership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Pilot" Collapsed="true">
+    <Position X="13" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAACABAAAAAAgAAAAAAEAAA=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.PlayerPilot" Collapsed="true">
+    <Position X="10.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAABAAAAAQAAAAAAAEAAA=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.NetworkPilot" Collapsed="true">
+    <Position X="13" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.NPCPilot" Collapsed="true">
+    <Position X="15.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAAAAAIEAAAAAAAAAAAAEAAg=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.MothershipPilot" Collapsed="true">
+    <Position X="15.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAIAAUIAAEAIAAAACAAAAAAMgAACAgAAAAAAEIAA=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Ship" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>mg6dFFptBCqLET51IBvAQQACBddfwQDp1jJSKHqwKCI=</HashCode>
+      <FileName>Objects\Ships\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.WarpHole" Collapsed="true">
+    <Position X="26.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAABAgQAAAAAAAAAAQAAgQAAAAAIAAAAAAA=</HashCode>
+      <FileName>Objects\WarpHole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Weapon" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAIAgAAgAAAAAACCAAABAAAohAAAAAAAEAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.EnergyDisruptor" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Laser" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Orb" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.BC_Laser" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.LaserWave" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.MSLaserWave" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAACAAABAAEAAABAAwAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.None" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRClient.Objects.Ships.PortInterfaceShip" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Ships\PortInterfaceShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SRClient.GUI.WindowSize" Collapsed="true">
+    <Position X="19.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\GUI\Framework\Size.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRClient.Objects.Decal" Collapsed="true">
+    <Position X="17.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAIAAAJACAAABAACAAAAAAABAAAA=</HashCode>
+      <FileName>Objects\Decal.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="Enums.AreaTypes" Collapsed="true">
+    <Position X="19.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAAAAAAAAAAgAggAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.ChatTypes" Collapsed="true">
+    <Position X="26.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAgAAAQBAAAAAAEAAABAAAEIAEgAAAAgggAAEAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.AdminCommands" Collapsed="true">
+    <Position X="17.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAAAAAAAAAAAAgAAACAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.ProjectileTypes" Collapsed="true">
+    <Position X="17.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoACAAAACAAAAIqggAwAgZYAgAAAoCAIAQMACABACIk=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.PlanetTypes" Collapsed="true">
+    <Position X="31.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAABiAABBAgAAAACAAAAAiFAAEAIAAAAAACAgQAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.WeaponTypes" Collapsed="true">
+    <Position X="26.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAQIAAAAAIAAAAAAgAAAABAAACAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.ModuleTypes" Collapsed="true">
+    <Position X="24.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAgAAAAAAhAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.ShieldTypes" Collapsed="true">
+    <Position X="21.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.ShipTypes" Collapsed="true">
+    <Position X="23" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAIBAAAYBAAAgEAgAAAAAAAAkAAAAAAAAQAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.GameStates" Collapsed="true">
+    <Position X="17.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAAAAhAAAwYAAAAAAAAACAAAgCIAAAAAAAMAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.BodyTypes" Collapsed="true">
+    <Position X="21.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAAAgAEAAAAAAEAABAAACQAAAAAgQAIAiAAQAAQ=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.OutfitTypes" Collapsed="true">
+    <Position X="28.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.GoodTypes" Collapsed="true">
+    <Position X="19.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAAAAAAAAAAAAAAIAACAAAAAgAAgIAAAAAA=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Enums.PurchaseRequestType" Collapsed="true">
+    <Position X="19.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Enums\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Networking.MessageTypes" Collapsed="true">
+    <Position X="23" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQA5gEASgAVAQFIFiBCCgSQEDEwZIAK5EARBoiCAAgA=</HashCode>
+      <FileName>Enums\MessageTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Networking.MSBMessageTypes" Collapsed="true">
+    <Position X="26.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAABEAgAAAAAgCgAAAAgAAAIAAACAgCABAAQAAAYA=</HashCode>
+      <FileName>Enums\MessageTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Log_Type" Collapsed="true">
+    <Position X="21.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Managers\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.DecalType" Collapsed="true">
+    <Position X="28.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\ParticleManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.EffectType" Collapsed="true">
+    <Position X="31.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAIAAAEAAAAIAAAAAQACAAAAAAAAAAAAEECEAAAAA=</HashCode>
+      <FileName>Managers\ParticleManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.GUI.ButtonType" Collapsed="true">
+    <Position X="24.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAAAAAAgA=</HashCode>
+      <FileName>Managers\GUI\LoginManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Invasion.BuildingType" Collapsed="true">
+    <Position X="23" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewBuildingManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Invasion.DefenceType" Collapsed="true">
+    <Position X="30" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Managers\Invasion\NewDefenceManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Managers.Invasion.TileTypes" Collapsed="true">
+    <Position X="24.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Managers\Invasion\NewTileManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRClient.Objects.PilotType" Collapsed="true">
+    <Position X="30" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Objects\Ships\Pilot.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

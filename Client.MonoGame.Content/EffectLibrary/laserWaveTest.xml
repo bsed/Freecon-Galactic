@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent>
+  <Asset Type="ProjectMercury.ParticleEffect">
+    <Item Type="ProjectMercury.Emitters.CircleEmitter">
+      <Name>Smoke Trail</Name>
+      <Budget>50000</Budget>
+      <Term>.2</Term>
+      <ReleaseQuantity>2</ReleaseQuantity>
+      <Enabled>True</Enabled>
+      <ReleaseSpeed>
+        <Value>0</Value>
+        <Variation>128</Variation>
+      </ReleaseSpeed>
+      <ReleaseColour>
+        <Value>0.5019608 0.5019608 0.5019608</Value>
+        <Variation>0 0 0</Variation>
+      </ReleaseColour>
+      <ReleaseOpacity>
+        <Value>1</Value>
+        <Variation>0</Variation>
+      </ReleaseOpacity>
+      <ReleaseScale>
+        <Value>1</Value>
+        <Variation>0</Variation>
+      </ReleaseScale>
+      <ReleaseRotation>
+        <Value>0</Value>
+        <Variation>0</Variation>
+      </ReleaseRotation>
+      <ReleaseImpulse>0 0</ReleaseImpulse>
+      <ParticleTextureAssetName>Textures\Cloud001</ParticleTextureAssetName>
+      <Modifiers>
+        <Item Type="ProjectMercury.Modifiers.OpacityModifier">
+          <Initial>0.2</Initial>
+          <Ultimate>0</Ultimate>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.ScaleModifier">
+          <InitialScale>48</InitialScale>
+          <UltimateScale>255</UltimateScale>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.DampingModifier">
+          <DampingCoefficient>1</DampingCoefficient>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.RotationRateModifier">
+          <InitialRate>1</InitialRate>
+          <FinalRate>0</FinalRate>
+        </Item>
+        <Item Type="ProjectMercury.Modifiers.ColourModifier">
+          <InitialColour>0 1 0</InitialColour>
+          <UltimateColour>0 0 1</UltimateColour>
+        </Item>
+      </Modifiers>
+      <BlendMode>Alpha</BlendMode>
+      <TriggerOffset>0 0</TriggerOffset>
+      <MinimumTriggerPeriod>0</MinimumTriggerPeriod>
+      <Radius>1</Radius>
+      <Ring>true</Ring>
+      <Radiate>true</Radiate>
+    </Item>
+    
+    
+    <Name>Basic Explosion</Name>
+    <Author>Matt Davey</Author>
+    <Description>A simple explosion effect.</Description>
+  </Asset>
+</XnaContent>

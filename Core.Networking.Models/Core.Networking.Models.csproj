@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{726B464B-499C-40CF-BD72-9764A409E4F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freecon.Core.Networking.Models</RootNamespace>
+    <AssemblyName>Freecon.Core.Networking.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonSerializer, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\CommonSerializer.1.0.1\lib\net45\CommonSerializer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CommonSerializer.MsgPack.Cli, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\CommonSerializer.MsgPack.Cli.1.0.1\lib\net45\CommonSerializer.MsgPack.Cli.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\Microsoft.IO.RecyclableMemoryStream.1.1.0.0\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MsgPack, Version=0.6.0.0, Culture=neutral, PublicKeyToken=a2625990d5dc0167, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\MsgPack.Cli.0.6.5\lib\net45\MsgPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>$(SolutionDir)packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>$(SolutionDir)packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>$(SolutionDir)packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>$(SolutionDir)packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\MasterServerTimestamp.cs" />
+    <Compile Include="ICommMessage.cs" />
+    <Compile Include="IDList.cs" />
+    <Compile Include="IMessagePackSerializable.cs" />
+    <Compile Include="MasterSlaveMessages.cs" />
+    <Compile Include="Messages\ColonizeRequestDenial.cs" />
+    <Compile Include="Messages\MessageAddCargoToShip.cs" />
+    <Compile Include="Messages\MessageAddRemoveShipsTeam.cs" />
+    <Compile Include="Messages\MessageChangeShipLocation.cs" />
+    <Compile Include="Messages\MessageChatMessage.cs" />
+    <Compile Include="Messages\MessageClientLogin.cs" />
+    <Compile Include="Messages\Combat\MessageCollisionReport.cs" />
+    <Compile Include="Messages\MessageColonizeRequestApproval.cs" />
+    <Compile Include="Messages\MessageColonyCaptured.cs" />
+    <Compile Include="Messages\AreaChange\MessageDockRequest.cs" />
+    <Compile Include="Messages\MessageEmptyMessage.cs" />
+    <Compile Include="Messages\AreaChange\MessageLandRequest.cs" />
+    <Compile Include="Messages\Combat\MessageObjectFired.cs" />
+    <Compile Include="Messages\Trading\MessageInitiateShipTrade.cs" />
+    <Compile Include="Messages\Trading\MessagePortServiceRequest.cs" />
+    <Compile Include="Messages\Trading\MessagePortTradeRequest.cs" />
+    <Compile Include="Messages\Add or remove to or from Area\MessageReceiveFloatyAreaObjects.cs" />
+    <Compile Include="Messages\Add or remove to or from Area\MessageReceiveNewPortShip.cs" />
+    <Compile Include="Messages\Add or remove to or from Area\MessageReceiveNewShips.cs" />
+    <Compile Include="Messages\Add or remove to or from Area\MessageReceiveNewStructure.cs" />
+    <Compile Include="Messages\MessageRemoveCargoFromShip.cs" />
+    <Compile Include="Messages\Add or remove to or from Area\MessageRemoveKillRevive.cs" />
+    <Compile Include="Messages\MessagePositionUpdateData.cs" />
+    <Compile Include="Messages\MessageReportFloatyCollision.cs" />
+    <Compile Include="Messages\MessageSelectorCommand.cs" />
+    <Compile Include="Messages\Combat\MessageSetHealth.cs" />
+    <Compile Include="Messages\Combat\MessageShipFireRequest.cs" />
+    <Compile Include="Messages\Combat\MessageStructureFireRequest.cs" />
+    <Compile Include="Messages\MessageStructurePlacementRequest.cs" />
+    <Compile Include="Messages\MessageStructureRequestResponse.cs" />
+    <Compile Include="Messages\AreaChange\MessageWarpDenial.cs" />
+    <Compile Include="Messages\AreaChange\MessageWarpRequest.cs" />
+    <Compile Include="Messages\Combat\MessageShipFireRequestDenial.cs" />
+    <Compile Include="Messages\MessageTimeSync.cs" />
+    <Compile Include="Messages\Trading\MessagePortTradeResponse.cs" />
+    <Compile Include="Messages\Trading\MessageShipTradeData.cs" />
+    <Compile Include="Messages\Trading\MessageShipTradeRequest.cs" />
+    <Compile Include="Messages\Trading\MessageTradeDataUpdate.cs" />
+    <Compile Include="MessageTypes.cs" />
+    <Compile Include="Objects\CargoData.cs" />
+    <Compile Include="Objects\FloatyAreaObjectData.cs" />
+    <Compile Include="Objects\MoonEntryData.cs" />
+    <Compile Include="Objects\PlanetEntryData.cs" />
+    <Compile Include="Objects\PlayerInfo.cs" />
+    <Compile Include="Objects\PortEntryData.cs" />
+    <Compile Include="Objects\PositionUpdateData.cs" />
+    <Compile Include="Objects\RawMessageContainer.cs" />
+    <Compile Include="Objects\PositionUpdate.cs" />
+    <Compile Include="Objects\ShipData.cs" />
+    <Compile Include="Objects\SpaceModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequiredParameterNotInitializedException.cs" />
+    <Compile Include="ServerToServer\MessageClientHandoff.cs" />
+    <Compile Include="ServerToServer\MessageClientLoginRequest.cs" />
+    <Compile Include="ServerToServer\MessageClientLoginResponse.cs" />
+    <Compile Include="ServerToServer\MessageColonyDataPush.cs" />
+    <Compile Include="ServerToServer\MessageIDRequest.cs" />
+    <Compile Include="ServerToServer\MessageIDResponse.cs" />
+    <Compile Include="ServerToServer\MessagePlayerRemoveTeam.cs" />
+    <Compile Include="ServerToServer\MessageServerToServer.cs" />
+    <Compile Include="ServerToServer\MessageShout.cs" />
+    <Compile Include="ServerToServer\SlaveConnectionMessages.cs" />
+    <Compile Include="ServerToServer\MessageSlavePing.cs" />
+    <Compile Include="ServerToServer\MessageStartUpdatingSystems.cs" />
+    <Compile Include="Simulator\MessageSimulatorConnectionRequest.cs" />
+    <Compile Include="Simulator\MessageSimulatorConnectionResponse.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Configs\Core.Configs.csproj">
+      <Project>{f8953f1b-016e-4103-85ab-a80dc44d13fd}</Project>
+      <Name>Core.Configs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Models.Enums\Core.Models.Enums.csproj">
+      <Project>{51ec19fa-7d49-434e-a835-2c51b00a7da7}</Project>
+      <Name>Core.Models.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Networking.Models.Proto\Core.Networking.Models.Proto.csproj">
+      <Project>{f0e4c837-225e-46f0-b20c-ea8f0d81fc00}</Project>
+      <Name>Core.Networking.Models.Proto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Utils\Core.Utililities.csproj">
+      <Project>{6b6053ac-7a8f-4dba-b472-15b92c6ae0ac}</Project>
+      <Name>Core.Utililities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren\Lidgren\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{49ba1c69-6104-41ac-a5d8-b54fa9f696e8}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server.Console\Server.Console.csproj">
+      <Project>{5b8733f8-69d6-4545-9a7e-b3f44d7c9105}</Project>
+      <Name>Server.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

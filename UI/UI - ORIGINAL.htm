@@ -1,0 +1,231 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+
+		<link type="text/css" href="jQuery/css/smoothness/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />	
+
+		<link type="text/css" href="UI.css" rel="Stylesheet" />	
+
+		<script type="text/javascript" src="jQuery/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="jQuery/js/jquery-ui-1.8.20.custom.min.js"></script>
+		<script type="text/javascript" src="jQuery/js/jquery.layoutengine.min.js"></script>
+
+		<script type="text/javascript">
+		
+
+
+		$(function()	{
+						$( "#txtDialog" ).dialog({position: [10,440], closeOnEscape: false, dialogClass: "textDialog",resizable: false, width:'auto'});
+						});
+
+		function ShowDialog(dialogID)
+			{		
+			$( "#"+dialogID ).dialog();
+			}
+
+		function addTextMessage(message)
+			{
+			textBox = document.getElementById('txtDialogTextArea');			
+			textBox.value =textBox.value + message + " \n";
+			}
+
+			//http://www.rajeeshcv.com/page/details/6/layoutmanager-jquery-plugin
+			$(document).ready(function () {
+
+				//make elements unselectable.
+				$("*:not(input)").addClass("unselectable");
+
+				var layoutSettings =
+				{
+    				Name: "Main",
+    				Dock: $.layoutEngine.DOCK.FILL,
+    				EleID: "main",
+    				Margin: 5,
+    				Children: [
+									{
+                        				Name: "Top",
+                        				Dock: $.layoutEngine.DOCK.TOP,
+                        				EleID: "top",
+                        				Margin: 5,
+                        				Height: 20
+									},
+									{
+                        				Name: "Left",
+                        				Dock: $.layoutEngine.DOCK.LEFT,
+                        				EleID: "left",
+                        				MarginLeft: 5,
+                        				MarginRight: 5,
+                        				Width: 30
+									},
+									{
+                        				Name: "Fill",
+                        				Dock: $.layoutEngine.DOCK.FILL,
+                        				EleID: "fill",
+                        				Margin: 5,
+									},
+									{
+                        				Name: "Right",
+                        				Dock: $.layoutEngine.DOCK.RIGHT,
+                        				EleID: "right",
+                        				MarginLeft: 5,
+                        				MarginRight: 5,
+                        				Width: 100
+									},
+									{
+                        				Name: "Bottom",
+                        				Dock: $.layoutEngine.DOCK.BOTTOM,
+                        				EleID: "bottom",
+                        				Margin: 5,
+                        				Height: 100
+									}
+								]
+
+				};
+
+				$.layoutEngine(layoutSettings);
+
+				$("#txtDialogInput").keyup(function (event) 
+					{
+					if (event.keyCode == 13) 
+						{
+						AnotherObject.ChatTextEntered($("#txtDialogInput").val());
+						$("#txtDialogInput").val('');
+						}
+				});		
+
+			});
+		
+		//Call a .Net function, no return value --!>
+		function myMethod() {
+        document.write("In myMethod, calling .NET but expecting no return value.<br/>");
+
+        jsobject.callNETNoReturn();
+		}
+	
+		//Call a .Net function, get return value (can pass data from .Net to webview) --!>
+		function myMethodExpectingReturn() {
+			document.write("In myMethodExpectingReturn, calling .NET and expecting return value.<br/>");
+
+			var returnVal2 = jsobject.callNETWithReturn("foo");
+			document.write("Got value from .NET: " + returnVal2 + "<br/>");
+		}
+
+		//Return a value, i.e. Tx/Rx with .Net --!>
+		function myMethodProvidingReturn(whatToReturn) {
+			var returnVal =  whatToReturn + "bar";
+			document.write("Returning '" + returnVal + "' to .NET.");
+
+			return returnVal;
+		}
+		
+	
+		
+		
+		
+		
+		</script>
+
+		
+		<title></title>
+	</head>
+	<body>
+
+
+
+<div id="main" style="background-color:transparent">
+	
+	
+	<div id="top" class="baseBar">
+		Hit F1 - F4 for mystery sites.  F5 returns here.
+	</div>
+
+
+	<div id="left" class="baseBar" style=" display:none">
+		Left
+	</div>
+
+
+	<div id="fill" style="background-color:transparent; display:none">
+		Fill
+	</div>
+
+
+	<div id="right" class="baseBar">
+		Right
+		<br />
+		<button onclick='$("#dialog").dialog({size:[300,300]});' >Rogue Moon</button>
+		<br />
+		<button onclick='MyObject.SelectItem("foo");' >Select</button>
+		<br />
+		<button onclick='addTextMessage("Aaah.");' >Say Aaah.</button>
+		<br />		
+		<button onclick='AnotherObject.ThisClicked("asdf");' >ThisClick.</button>
+		<br />		
+
+
+		
+
+	</div>
+
+
+	<div id="bottom"  class="baseBar center_box">
+
+		<table class="bottomBarTable">
+			<tr>
+				<td width="10%">Ung.</td>
+				<td align="center">
+					<ul class="abilities_bar">
+
+						<li><img src='Images/Icons1/Command Center.png' alt='Attack' onclick="InstructionInterface.PassInstruction('ToggleColonizeMode');"/></li>
+						<li><img src='Images/Icons1/turret head.png' alt='Spell' onclick="InstructionInterface.PassInstruction('TurretClicked');" /></li>
+						<li><img src='Images/Icons1/Missile.png' alt='Healing Potion' onclick="InstructionInterface.PassInstruction('MissileClicked');"/></li>
+						<li><img src='Images/Icons1/potion_blu.png' alt='Mana Potion' onclick="InstructionInterface.PassInstruction('Drink mana potion.');"/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>
+						<li><img src='Images/Icons1/nothing.png' alt='Run Away'/></li>						
+						<li><img src='Images/Icons1/backpack.png' alt='Inventory' onclick="InstructionInterface.PassInstruction('Inventory');"/></li>
+						<li><img src='Images/Icons2/Icon.3_83.png' alt='Character' onclick="InstructionInterface.PassInstruction('Stats');"/></li>
+						<li><img src='Images/Icons2/Icon.6_36.png' alt='Options' onclick="InstructionInterface.PassInstruction('Options');"/></li> 
+					</ul>
+				</td>
+				<td width="10%">Fnord</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+
+
+
+		<div id="dialog" title="Basic dialog"  style="display:none">
+			<iframe src="http://www.step2studio.com/roguemoon/roguemoon.php" width="90%" height="90%"></iframe>
+		</div>
+
+		<div id="txtDialog" title="Debug Text"  style="display:none">
+			<textarea id="txtDialogTextArea" rows='10' cols='40' readonly="readonly" ></textarea>
+			<br />
+			<input id="txtDialogInput" type="text"   size='40'/>
+		</div>
+
+
+		<div id="dlgInventory" title="Inventory"  style="display:none">
+			<p>This is an example dialog where you might find your inventory.</p>
+			<p>Sadly you have nothing, sap.</p>
+		</div>
+
+		<div id="dlgOptions" title="Options"  style="display:none">
+			<p>Here you can not set your audio, video, and gameplay options.</p>			
+		</div>
+
+		<div id="dlgStats" title="Stats"  style="display:none">
+			<p>Here you can weep for your puny character.</p>			
+		</div>
+
+
+
+	</body>
+</html>
